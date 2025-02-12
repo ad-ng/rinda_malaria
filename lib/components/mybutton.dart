@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:rinda_malaria/pages/page_2.dart';
 
 class MyButton extends StatelessWidget {
-  const MyButton({super.key});
+  final Widget page;
+  MyButton({super.key, required this.page});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +12,7 @@ class MyButton extends StatelessWidget {
       onTap: () => Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => Page2(),
+            builder: (context) => page,
           )),
       child: Container(
         margin: EdgeInsets.only(
