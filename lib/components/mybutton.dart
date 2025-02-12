@@ -28,7 +28,7 @@ class MyButton extends StatelessWidget {
         child: Center(
           child: Text(
             'Emeza',
-            style: TextStyle(color: Colors.green[900], fontSize: 20),
+            style: TextStyle(color: Colors.white, fontSize: 20),
           ),
         ),
       ),

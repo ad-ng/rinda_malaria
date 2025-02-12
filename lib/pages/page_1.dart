@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/pages/page_2.dart';
 
@@ -11,13 +12,14 @@ class Page1 extends StatefulWidget {
   State<Page1> createState() => _Page1State();
 }
 
-List<String> options = ['afite malaria', 'nta malaria afite'];
+List<String> options = ['Afite Malaria', 'Nta Malaria Afite'];
 
 class _Page1State extends State<Page1> {
   String currentOption = options[0];
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    double screenWidth = MediaQuery.of(context).size.width;
     return Scaffold(
       body: Stack(
         children: [
@@ -39,40 +41,52 @@ class _Page1State extends State<Page1> {
           Column(
             children: [
               SizedBox(
-                height: screenHeight * 0.25,
+                height: screenHeight * 0.07,
               ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  'Amakaru kumurwayi',
-                  style: TextStyle(
-                    color: Colors.green,
-                    fontSize: 30,
+              Headers(),
+              SizedBox(
+                height: screenHeight * 0.05,
+              ),
+              Card(
+                color: Colors.blueGrey[300],
+                child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Prescription of Malaria',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                    ),
                   ),
                 ),
               ),
-              ListTile(
-                title: Text('Umurwayi afite malaria'),
-                leading: Radio(
-                  value: options[0],
-                  groupValue: currentOption,
-                  onChanged: (value) {
-                    setState(() {
-                      currentOption = value.toString();
-                    });
-                  },
-                ),
-              ),
-              ListTile(
-                title: Text('Umurwayi nta malaria afite'),
-                leading: Radio(
-                  value: options[1],
-                  groupValue: currentOption,
-                  onChanged: (value) {
-                    setState(() {
-                      currentOption = value.toString();
-                    });
-                  },
+              SizedBox(height: screenHeight * 0.05),
+              Container(
+                margin: EdgeInsets.symmetric(horizontal: 12),
+                height: screenWidth * 0.43,
+                width: screenWidth,
+                child: Card(
+                  color: Colors.blueGrey[300],
+                  child: ListView.builder(
+                    itemCount: options.length,
+                    itemBuilder: (context, index) {
+                      return ListTile(
+                          title: Text(
+                            options[index],
+                            style: TextStyle(color: Colors.white, fontSize: 20),
+                          ),
+                          leading: Radio(
+                            activeColor: Colors.white,
+                            value: options[index],
+                            groupValue: currentOption,
+                            onChanged: (value) {
+                              setState(() {
+                                currentOption = value.toString();
+                              });
+                            },
+                          ));
+                    },
+                  ),
                 ),
               ),
               MyButton(
