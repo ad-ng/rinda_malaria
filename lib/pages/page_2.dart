@@ -6,7 +6,7 @@ import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
-import 'package:rinda_malaria/pages/page_3.dart';
+import 'package:rinda_malaria/pages/page_4.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({super.key});
@@ -23,25 +23,25 @@ List<String> options = [
 
 class _Page2State extends State<Page2> {
   String currentOption = options[0];
-  options_age() {
-    if (currentOption == 'Artemether Lumefantrine') {
-      return [
-        'Amezi 6 - 36',
-        'Amezi 37 - Imyaka 8',
-        'Imyaka 9 - Imyaka 14',
-        'Imyaka 15 - kuzamura'
-      ];
-    } else if (currentOption == 'Artesunate -Pyronaridine') {
-      return [
-        'Amezi 6 - 11',
-        'Amezi 12 - 24',
-        'Amezi 25 - Imyaka 8',
-        'Imyaka 9 - 15',
-        'Imyaka 15 - 20',
-        'Imyaka 20 kuzamura'
-      ];
-    }
-  }
+  // options_age() {
+  //   if (currentOption == 'Artemether Lumefantrine') {
+  //     return [
+  //       'Amezi 6 - 36',
+  //       'Amezi 37 - Imyaka 8',
+  //       'Imyaka 9 - Imyaka 14',
+  //       'Imyaka 15 - kuzamura'
+  //     ];
+  //   } else if (currentOption == 'Artesunate -Pyronaridine') {
+  //     return [
+  //       'Amezi 6 - 11',
+  //       'Amezi 12 - 24',
+  //       'Amezi 25 - Imyaka 8',
+  //       'Imyaka 9 - 15',
+  //       'Imyaka 15 - 20',
+  //       'Imyaka 20 kuzamura'
+  //     ];
+  //   }
+  // }
 
   options_weigh() {
     if (currentOption == 'Artemether Lumefantrine') {
@@ -181,12 +181,7 @@ class _Page2State extends State<Page2> {
                       ),
                     ),
                     MyButton(
-                      page: Page3(
-                        options_aged: options_age(),
-                        currentOption_age: options_age()[0],
-                        options_weigh: options_weigh(),
-                        currentOption_weigh: options_weigh()[0],
-                      ),
+                      page: Page4(options_weigh: options_weigh(), currentOption_weigh: options_weigh()[0]),
                     )
                   ],
                 ),
