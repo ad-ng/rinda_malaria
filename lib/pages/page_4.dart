@@ -1,7 +1,9 @@
 import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rinda_malaria/components/backButton.dart';
+import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_5.dart';
@@ -37,37 +39,42 @@ class _Page3State extends State<Page4> {
                 ),
                 BackdropFilter(
                   filter: ImageFilter.blur(
-                    sigmaX: 2,
-                    sigmaY: 3,
+                    sigmaX: 3,
+                    sigmaY: 2,
                   ),
                   child: Container(
-                    color: Colors.black.withOpacity(0),
+                    color: Colors.black.withOpacity(
+                        0), // Optional: overlay to make it darker or transparent
                   ),
                 ),
                 Column(
                   children: [
-                    BackButtonCustom(),
-                    SizedBox(
-                      height: screenHeight * 0.1,
+                    BackButtonCustom(
+                      isLast: false,
                     ),
-                    Card(
-                      color: Colors.blueGrey[300],
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Emeza ibiro',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
+                    Headers(),
+                    SizedBox(
+                      height: screenHeight * 0.000,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Emeza ibiro',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30,
                         ),
                       ),
                     ),
                     SizedBox(
-                      height: screenHeight * 0.03,
+                      height: screenHeight * 0.01,
                     ),
                     Expanded(
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Card(
-                          color: Colors.blueGrey[300],
+                          color: Color.fromARGB(234, 144, 201, 229),
                           child: ListView.builder(
                             itemCount: widget.options_weigh.length,
                             itemBuilder: (context, index) {
@@ -75,7 +82,9 @@ class _Page3State extends State<Page4> {
                                 title: Text(
                                   widget.options_weigh[index],
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 20),
                                 ),
                                 leading: Radio(
                                   activeColor: Colors.white,
@@ -96,7 +105,7 @@ class _Page3State extends State<Page4> {
                     ),
                     MyButton(page: Page5()),
                     SizedBox(
-                      height: screenHeight * 0.2,
+                      height: screenHeight * 0.08,
                     )
                   ],
                 ),

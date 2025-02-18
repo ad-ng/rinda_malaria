@@ -12,7 +12,7 @@ class Page1 extends StatefulWidget {
   State<Page1> createState() => _Page1State();
 }
 
-List<String> options = ['Afite Malaria', 'Nta Malaria Afite'];
+List<String> options = ['Afite Malariya', 'Nta Malariya Afite'];
 
 class _Page1State extends State<Page1> {
   String currentOption = options[0];
@@ -47,15 +47,19 @@ class _Page1State extends State<Page1> {
               SizedBox(
                 height: screenHeight * 0.05,
               ),
-              Card(
-                color: Colors.blueGrey[300],
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Prescription of Malaria',
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 30,
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 8),
+                child: Card(
+                  color: Color.fromARGB(234, 2, 106, 158),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      textAlign: TextAlign.center,
+                      'IFASHAMIVURIRE KU NDWARA YA MALARIYA',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 30,
+                      ),
                     ),
                   ),
                 ),
@@ -66,7 +70,7 @@ class _Page1State extends State<Page1> {
                 height: screenWidth * 0.43,
                 width: screenWidth,
                 child: Card(
-                  color: Colors.blueGrey[300],
+                  color: Color.fromARGB(234, 144, 201, 229),
                   child: ListView.builder(
                     itemCount: options.length,
                     itemBuilder: (context, index) {
@@ -90,6 +94,7 @@ class _Page1State extends State<Page1> {
                 ),
               ),
               MyButton(
+                currentOption: currentOption,
                 page: Page2(),
               )
             ],

@@ -10,13 +10,15 @@ class Headers extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceAround,
       children: [
         Image.asset(
-          '././lib/images/moh.png',
-          width: screenWidth * 0.28,
+          '././lib/images/Logo_RBC.png',
+          // color: Colors.white,
+          width: screenWidth * 0.5,
         ),
         Image.asset(
-          '././lib/images/Logo_RBC.png',
-          width: screenWidth * 0.4,
-        )
+          '././lib/images/Zero.webp',
+          // color: Colors.white,
+          width: screenWidth * 0.2,
+        ),
       ],
     );
   }

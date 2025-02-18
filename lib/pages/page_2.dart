@@ -23,25 +23,6 @@ List<String> options = [
 
 class _Page2State extends State<Page2> {
   String currentOption = options[0];
-  // options_age() {
-  //   if (currentOption == 'Artemether Lumefantrine') {
-  //     return [
-  //       'Amezi 6 - 36',
-  //       'Amezi 37 - Imyaka 8',
-  //       'Imyaka 9 - Imyaka 14',
-  //       'Imyaka 15 - kuzamura'
-  //     ];
-  //   } else if (currentOption == 'Artesunate -Pyronaridine') {
-  //     return [
-  //       'Amezi 6 - 11',
-  //       'Amezi 12 - 24',
-  //       'Amezi 25 - Imyaka 8',
-  //       'Imyaka 9 - 15',
-  //       'Imyaka 15 - 20',
-  //       'Imyaka 20 kuzamura'
-  //     ];
-  //   }
-  // }
 
   options_weigh() {
     if (currentOption == 'Artemether Lumefantrine') {
@@ -51,14 +32,27 @@ class _Page2State extends State<Page2> {
         'Ibiro 25 - <35',
         'Ibiro 35 no kuzamura'
       ];
-    } else if (currentOption == 'Artesunate -Pyronaridine') {
+    }
+    if (currentOption == 'Artesunate -Pyronaridine') {
       return [
-        '5- < 8',
-        '8- < 15',
-        '15- <20',
-        '20- <24',
-        '24- <45',
-        'Ibiro 45 kuzamura '
+        'Ibiro 5- < 8',
+        'Ibiro 8- < 15',
+        'Ibiro 15- <20',
+        'Ibiro 20- <24',
+        'Ibiro 24- <45',
+        'Ibiro 45 kuzamura'
+      ];
+    }
+    if (currentOption == 'DihydroartemisininPiperaquine') {
+      return [
+        'Ibiro 5 - < 8',
+        'Ibiro 8- <11',
+        'Ibiro 11- <17',
+        'Ibiro 17 - <25',
+        'Ibiro 25 - <36',
+        'Ibiro 36 - <60',
+        'Ibiro 60 - <80',
+        'Ibiro 80 Kuzamura'
       ];
     }
   }
@@ -80,8 +74,8 @@ class _Page2State extends State<Page2> {
                 ),
                 BackdropFilter(
                   filter: ImageFilter.blur(
-                    sigmaX: 2,
-                    sigmaY: 3,
+                    sigmaX: 3,
+                    sigmaY: 2,
                   ),
                   child: Container(
                     color: Colors.black.withOpacity(
@@ -90,21 +84,21 @@ class _Page2State extends State<Page2> {
                 ),
                 Column(
                   children: [
-                    BackButtonCustom(),
+                    BackButtonCustom(
+                      isLast: false,
+                    ),
                     Headers(),
                     SizedBox(
                       height: screenHeight * 0.05,
                     ),
-                    Card(
-                      color: Colors.blueGrey[300],
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text(
-                          'Hitamo umuti',
-                          style: TextStyle(
-                            fontSize: 30,
-                            color: Colors.white,
-                          ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Hitamo umuti',
+                        style: TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.w500,
+                          color: Colors.black,
                         ),
                       ),
                     ),
@@ -114,14 +108,16 @@ class _Page2State extends State<Page2> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
-                        color: Colors.blueGrey[300],
+                        color: Color.fromARGB(234, 144, 201, 229),
                         child: Column(
                           children: [
                             ListTile(
                               title: Text(
                                 'Artemether Lumefantrine',
                                 style: TextStyle(
-                                    color: Colors.white, fontSize: 20),
+                                    fontWeight: FontWeight.w400,
+                                    color: Colors.white,
+                                    fontSize: 20),
                               ),
                               trailing: Image.asset(
                                 '././lib/images/Artemether-Lumefantrine.avif',
@@ -141,7 +137,9 @@ class _Page2State extends State<Page2> {
                             ListTile(
                               title: Text('Dihydroartemisinin - Piperaquine',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20)),
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white,
+                                      fontSize: 20)),
                               trailing: Image.asset(
                                 '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg',
                                 height: screenHeight * 0.1,
@@ -160,7 +158,9 @@ class _Page2State extends State<Page2> {
                             ListTile(
                               title: Text('Artesunate -Pyronaridine',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20)),
+                                      fontWeight: FontWeight.w400,
+                                      color: Colors.white,
+                                      fontSize: 20)),
                               trailing: Image.asset(
                                 '././lib/images/artesunate-tablets-box.png',
                                 height: screenHeight * 0.1,
@@ -181,7 +181,9 @@ class _Page2State extends State<Page2> {
                       ),
                     ),
                     MyButton(
-                      page: Page4(options_weigh: options_weigh(), currentOption_weigh: options_weigh()[0]),
+                      page: Page4(
+                          options_weigh: options_weigh(),
+                          currentOption_weigh: options_weigh()[0]),
                     )
                   ],
                 ),
