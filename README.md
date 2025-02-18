@@ -2,8 +2,10 @@
 application ihugura abanurse kubujyanye n'i miti mishya ya malaria
 
 
-## Image Example
+## Ingero mumafoto
 
-Here’s an image of my project:
+## Ifoto 1
+<img src="./screenshots/page2.png" width="300" />
 
-![Project Screenshot](./screenshots/page1.png)
+## Ifoto 2 
+<img src="./screenshots/page2.png" width="300" />
