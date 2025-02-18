@@ -6,4 +6,4 @@ application ihugura abanurse kubujyanye n'i miti mishya ya malaria
 
 Here’s an image of my project:
 
-![Project Screenshot](./lib/images/Zero.webp)
+![Project Screenshot](./screenshots/page1.png)
