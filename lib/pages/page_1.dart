@@ -70,17 +70,17 @@ class _Page1State extends State<Page1> {
                 height: screenWidth * 0.43,
                 width: screenWidth,
                 child: Card(
-                  color: Color.fromARGB(234, 144, 201, 229),
+                  color: Colors.white,
                   child: ListView.builder(
                     itemCount: options.length,
                     itemBuilder: (context, index) {
                       return ListTile(
                           title: Text(
                             options[index],
-                            style: TextStyle(color: Colors.white, fontSize: 20),
+                            style: TextStyle(color: Colors.black, fontSize: 20),
                           ),
                           leading: Radio(
-                            activeColor: Colors.white,
+                            activeColor: Colors.black,
                             value: options[index],
                             groupValue: currentOption,
                             onChanged: (value) {

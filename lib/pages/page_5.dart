@@ -50,12 +50,12 @@ class _Page5State extends State<Page5> {
 
                 Card(
                   margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                  color: Color.fromARGB(234, 144, 201, 229),
+                  color: Colors.white,
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Ingano y\'umuti (Dosages): \n${value.inganoYumuti().toString()}',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      'Ingano y\'umuti (Dosage): \n${value.inganoYumuti().toString()}',
+                      style: TextStyle(color: Colors.black, fontSize: 20),
                     ),
                   ),
                 ),
@@ -66,7 +66,7 @@ class _Page5State extends State<Page5> {
                   itemBuilder: (context, index) {
                     return Card(
                       margin: EdgeInsets.only(left: 10, right: 10, bottom: 10),
-                      color: Color.fromARGB(234, 144, 201, 229),
+                      color: Colors.white,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
                         child: Column(
@@ -78,7 +78,7 @@ class _Page5State extends State<Page5> {
                                 Text(
                                   'Ireme ry’umuti (Strength):  ',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.black, fontSize: 20),
                                 ),
                                 Text(
                                   value.iremeRyumuti()[index],
@@ -96,7 +96,7 @@ class _Page5State extends State<Page5> {
                                 Text(
                                   'Uko umurwayi afata umuti:  ',
                                   style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
+                                      color: Colors.black, fontSize: 20),
                                 ),
                                 Text(
                                   value.ukoUmutiUtangwa()[index],

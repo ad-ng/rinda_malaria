@@ -74,7 +74,7 @@ class _Page3State extends State<Page4> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 10),
                         child: Card(
-                          color: Color.fromARGB(234, 144, 201, 229),
+                          color: Colors.white,
                           child: ListView.builder(
                             itemCount: widget.options_weigh.length,
                             itemBuilder: (context, index) {
@@ -82,12 +82,12 @@ class _Page3State extends State<Page4> {
                                 title: Text(
                                   widget.options_weigh[index],
                                   style: TextStyle(
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontWeight: FontWeight.w400,
                                       fontSize: 20),
                                 ),
                                 leading: Radio(
-                                  activeColor: Colors.white,
+                                  activeColor: Colors.black,
                                   value: widget.options_weigh[index],
                                   groupValue: widget.currentOption_weigh,
                                   onChanged: (value) {

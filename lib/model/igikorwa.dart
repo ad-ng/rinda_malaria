@@ -32,7 +32,9 @@ class Igikorwa extends ChangeNotifier {
         return '➤ 60mg/180mg';
       } else if (ibiro == 'Ibiro 24- <45') {
         return '➤ 120mg/360mg';
-      } else if (ibiro == 'Ibiro 45 kuzamura') {
+      } else if (ibiro == 'Ibiro 45 <65') {
+        return '➤ 180mg/540mg';
+      } else if (ibiro == 'Ibiro 65 kuzamura') {
         return '➤ 240mg/720mg';
       }
     } else if (umuti == 'DihydroartemisininPiperaquine') {
@@ -110,10 +112,12 @@ class Igikorwa extends ChangeNotifier {
         return [
           '60mg/180mg/Ikinini',
         ];
-      } else if (ibiro == 'Ibiro 45 kuzamura') {
+      } else if (ibiro == 'Ibiro 45 <65') {
         return [
           '60mg/180mg/Ikinini',
         ];
+      } else if (ibiro == 'Ibiro 65 kuzamura') {
+        return ['60mg/180mg/Ikinini'];
       }
     } else if (umuti == 'DihydroartemisininPiperaquine') {
       if (ibiro == 'Ibiro 5 - < 8') {
@@ -216,10 +220,12 @@ class Igikorwa extends ChangeNotifier {
         return [
           'Ibinini 6 (Ibinini 2 ku munsi mu minsi 3)',
         ];
-      } else if (ibiro == 'Ibiro 45 kuzamura') {
+      } else if (ibiro == 'Ibiro 45 <65') {
         return [
-          'Ibinini 12 (Ibinini 4 ku munsimu minsi 3)',
+          'Ibinini 9 (Ibinini 3 ku munsi mu minsi 3)',
         ];
+      } else if (ibiro == 'Ibiro 65 kuzamura') {
+        return ['Ibinini 12 (Ibinini 4 ku munsi mu minsi 3)'];
       }
     } else if (umuti == 'DihydroartemisininPiperaquine') {
       if (ibiro == 'Ibiro 5 - < 8') {

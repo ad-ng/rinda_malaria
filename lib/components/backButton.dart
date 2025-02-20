@@ -26,9 +26,14 @@ class BackButtonCustom extends StatelessWidget {
                     context: context,
                     builder: (context) {
                       return AlertDialog(
-                        title: Text('Kwibutsa Umurwayi ibi bikurikira:'),
+                        title: Text(
+                          'IBIGOMBA KWITABWAHO: ',
+                          style: TextStyle(fontSize: 20),
+                        ),
                         content: Text(
-                            '➤ Kunywera umuti (Dose yambere imbere ya muganga)\n ➤ Musobanurire uko agomba kunywa doses zikurikira \n ➤ Musobanurire ko ari ngombwa kunywa umuti wose akawumara \n ➤ Ko abujijwe gusangira umuti nabandi barwayi \n ➤ Mugihe hari undi murwayi mu rugo cyangwa mubaturanyi agomba kujyanwa kw\'ivuriro cyangwa umujyanama w\'ubuzima\n ➤ Mugihe ukomeje kubona ibimenyetso by\'uburwayi nyuma yo kurangiza umuti wandikiwe, subira kumujyanama w\'ubuzima cyangwa kw\'ivuriro bagufashe'),
+                          '1.Kunywera umuti imbere ya muganga \n2.Kurangiza umuti uko wawandikiwe \n3.Kudasaranganya umuti \n4.Gushakisha abandi barwayi bari mu muryango \n5.Kugaruka mu gihe ukomeje kubona ibimenyetso',
+                          style: TextStyle(fontSize: 16),
+                        ),
                         actions: [
                           TextButton(
                             onPressed: () {
@@ -65,7 +70,7 @@ class BackButtonCustom extends StatelessWidget {
                       color: Colors.black,
                     ),
                     Text(
-                      'AHABANZA',
+                      'UBUTUMWA',
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     )
                   ],

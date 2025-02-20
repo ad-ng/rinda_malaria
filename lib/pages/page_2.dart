@@ -40,7 +40,8 @@ class _Page2State extends State<Page2> {
         'Ibiro 15- <20',
         'Ibiro 20- <24',
         'Ibiro 24- <45',
-        'Ibiro 45 kuzamura'
+        'Ibiro 45 <65',
+        'Ibiro 65 kuzamura'
       ];
     }
     if (currentOption == 'DihydroartemisininPiperaquine') {
@@ -108,7 +109,7 @@ class _Page2State extends State<Page2> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Card(
-                        color: Color.fromARGB(234, 144, 201, 229),
+                        color: Colors.white,
                         child: Column(
                           children: [
                             ListTile(
@@ -116,7 +117,7 @@ class _Page2State extends State<Page2> {
                                 'Artemether Lumefantrine',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w400,
-                                    color: Colors.white,
+                                    color: Colors.black,
                                     fontSize: 20),
                               ),
                               trailing: Image.asset(
@@ -124,7 +125,7 @@ class _Page2State extends State<Page2> {
                                 height: screenHeight * 0.1,
                               ),
                               leading: Radio(
-                                activeColor: Colors.white,
+                                activeColor: Colors.black,
                                 value: options[0],
                                 groupValue: currentOption,
                                 onChanged: (value) {
@@ -138,14 +139,14 @@ class _Page2State extends State<Page2> {
                               title: Text('Dihydroartemisinin - Piperaquine',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 20)),
                               trailing: Image.asset(
                                 '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg',
                                 height: screenHeight * 0.1,
                               ),
                               leading: Radio(
-                                activeColor: Colors.white,
+                                activeColor: Colors.black,
                                 value: options[1],
                                 groupValue: currentOption,
                                 onChanged: (value) {
@@ -159,14 +160,14 @@ class _Page2State extends State<Page2> {
                               title: Text('Artesunate -Pyronaridine',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w400,
-                                      color: Colors.white,
+                                      color: Colors.black,
                                       fontSize: 20)),
                               trailing: Image.asset(
                                 '././lib/images/artesunate-tablets-box.png',
                                 height: screenHeight * 0.1,
                               ),
                               leading: Radio(
-                                activeColor: Colors.white,
+                                activeColor: Colors.black,
                                 value: options[2],
                                 groupValue: currentOption,
                                 onChanged: (valuen) {
