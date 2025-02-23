@@ -121,7 +121,7 @@ class _Page2State extends State<Page2> {
                                     fontSize: 20),
                               ),
                               trailing: Image.asset(
-                                '././lib/images/Artemether-Lumefantrine.avif',
+                                '././lib/images/Antimalarial-Artemether-Lumefantrine-20-120mg.jpg',
                                 height: screenHeight * 0.1,
                               ),
                               leading: Radio(
