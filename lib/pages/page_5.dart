@@ -126,6 +126,7 @@ class _Page5State extends State<Page5> {
                     child: Image.asset(
                       '././lib/images/Animation - 1740305084861.gif',
                       height: 70,
+                      color: Colors.lightGreen,
                     ),
                   ),
                 ),
