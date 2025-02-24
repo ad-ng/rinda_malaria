@@ -16,7 +16,6 @@ class _Page5State extends State<Page5> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    double screenWidth = MediaQuery.of(context).size.width;
 
     return Consumer<Igikorwa>(
       builder: (context, value, child) => Scaffold(
@@ -121,7 +120,7 @@ class _Page5State extends State<Page5> {
                   ],
                 ),
                 Align(
-                  alignment: Alignment(0.8, -0.85),
+                  alignment: Alignment(0.8, -0.82),
                   child: Transform.rotate(
                     angle: 270 * 3.14159 / 180,
                     child: Image.asset(
