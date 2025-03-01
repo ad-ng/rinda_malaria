@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
-import 'package:rinda_malaria/pages/page_3.dart';
+import 'package:rinda_malaria/pages/page_5.dart';
 
-class Page2 extends StatefulWidget {
-  Page2({
+class Page3 extends StatefulWidget {
+  Page3({
     super.key,
   });
 
   @override
-  State<Page2> createState() => _Page3State();
+  State<Page3> createState() => _Page3State();
 }
 
-List<String> options = ['Simple Malaria', 'Simple Malaria + MDS', 'Severe'];
+List<String> options = ['New Case', 'Suspected Treatment Failure'];
 
-class _Page3State extends State<Page2> {
+class _Page3State extends State<Page3> {
   String currentOption = options[0];
   @override
   Widget build(BuildContext context) {
@@ -52,7 +52,7 @@ class _Page3State extends State<Page2> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Ubwoko bwa Maraliya',
+                    'Ubwoko bwa Case',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -95,7 +95,7 @@ class _Page3State extends State<Page2> {
                     ),
                   ),
                 ),
-                MyButton(page: Page3()),
+                MyButton(page: Page5()),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )
