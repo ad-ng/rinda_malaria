@@ -26,7 +26,9 @@ class Mysearch extends StatelessWidget {
               filled: true,
               prefixIcon: Icon(Icons.search_rounded),
               prefixIconColor: Theme.of(context).colorScheme.secondary,
-              hintText: 'Search',
+              hintText: 'Shaka Akarere hano',
+              hintStyle:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.normal),
               suffix: IconButton(
                   onPressed: () {
                     textEditingController.clear();
