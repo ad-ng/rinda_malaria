@@ -9,7 +9,8 @@ import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_6.dart';
 
 class Page5 extends StatefulWidget {
-  const Page5({super.key});
+  final String? medToRemove;
+  const Page5({super.key, this.medToRemove});
 
   @override
   State<Page5> createState() => _Page5State();
@@ -61,6 +62,9 @@ class _Page5State extends State<Page5> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    if (widget.medToRemove != null) {
+      print('inhereted value ${widget.medToRemove}');
+    }
     return Consumer<Igikorwa>(
       builder: (context, value, child) {
         value.umuti = currentOption;

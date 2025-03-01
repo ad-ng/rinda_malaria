@@ -4,6 +4,7 @@ import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/pages/page_4.dart';
+import 'package:rinda_malaria/pages/page_5.dart';
 
 class Page3 extends StatefulWidget {
   Page3({
@@ -95,7 +96,8 @@ class _Page3State extends State<Page3> {
                     ),
                   ),
                 ),
-                MyButton(page: Page4()),
+                MyButton(
+                    page: (currentOption == 'New Case') ? Page5() : Page4()),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )

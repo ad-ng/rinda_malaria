@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/mySearch.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
+import 'package:rinda_malaria/model/placeModel.dart';
 import 'package:rinda_malaria/pages/page_5.dart';
 
 class Page4 extends StatefulWidget {
@@ -14,43 +15,43 @@ class Page4 extends StatefulWidget {
   State<Page4> createState() => _Page4State();
 }
 
-List<String> options = [
-  'Bugesera',
-  'Gicumbi',
-  'Kayonza',
-  'Ngoma',
-  'Nyamasheke',
-  'Ruhango',
-  'Burera',
-  'Gisagara',
-  'Kicukiro',
-  'Ngororero',
-  'Nyanza',
-  'Rulindo',
-  'Gakenke',
-  'Huye',
-  'Kirehe',
-  'Nyabihu',
-  'Nyarugenge',
-  'Rusizi',
-  'Gasabo',
-  'Kamonyi',
-  'Muhanga',
-  'Nyagatare',
-  'Nyaruguru',
-  'Rutsiro',
-  'Gatsibo',
-  'Karongi',
-  'Musanze',
-  'Nyamagabe',
-  'Rubavu',
-  'Rwamagana'
+List<Placemodel> options = [
+  Placemodel(district: 'Bugesera', block: 'Block A'),
+  Placemodel(district: 'Gicumbi', block: 'Block A'),
+  Placemodel(district: 'Kayonza', block: 'Block A'),
+  Placemodel(district: 'Ngoma', block: 'Block A'),
+  Placemodel(district: 'Nyamasheke', block: 'Block C'),
+  Placemodel(district: 'Ruhango', block: 'Block B'),
+  Placemodel(district: 'Burera', block: 'Block C'),
+  Placemodel(district: 'Gisagara', block: 'Block B'),
+  Placemodel(district: 'Kicukiro', block: 'Block A'),
+  Placemodel(district: 'Ngororero', block: 'Block C'),
+  Placemodel(district: 'Nyanza', block: 'Block B'),
+  Placemodel(district: 'Rulindo', block: 'Block C'),
+  Placemodel(district: 'Gakenke', block: 'Block C'),
+  Placemodel(district: 'Huye', block: 'Block B'),
+  Placemodel(district: 'Kirehe', block: 'Block A'),
+  Placemodel(district: 'Nyabihu', block: 'Block C'),
+  Placemodel(district: 'Nyarugenge', block: 'Block A'),
+  Placemodel(district: 'Rusizi', block: 'Block C'),
+  Placemodel(district: 'Gasabo', block: 'Block A'),
+  Placemodel(district: 'Kamonyi', block: 'Block B'),
+  Placemodel(district: 'Muhanga', block: 'Block B'),
+  Placemodel(district: 'Nyagatare', block: 'Block A'),
+  Placemodel(district: 'Nyaruguru', block: 'Block B'),
+  Placemodel(district: 'Rutsiro', block: 'Block C'),
+  Placemodel(district: 'Gatsibo', block: 'Block A'),
+  Placemodel(district: 'Karongi', block: 'Block C'),
+  Placemodel(district: 'Musanze', block: 'Block C'),
+  Placemodel(district: 'Nyamagabe', block: 'Block B'),
+  Placemodel(district: 'Rubavu', block: 'Block C'),
+  Placemodel(district: 'Rwamagana', block: 'Block A')
 ];
-List<String> filteredPlace = [];
+List<Placemodel> filteredPlace = [];
 TextEditingController textEditingController = new TextEditingController();
 
 class _Page4State extends State<Page4> {
-  String currentOption = options[0];
+  String currentOption = options[0].district;
 
   @override
   void initState() {
@@ -67,7 +68,8 @@ class _Page4State extends State<Page4> {
         filteredPlace = options; // Reset to all places when search is empty
       } else {
         filteredPlace = options
-            .where((place) => place.toLowerCase().contains(query.toLowerCase()))
+            .where((place) =>
+                place.district.toLowerCase().contains(query.toLowerCase()))
             .toList();
       }
     });
@@ -129,8 +131,8 @@ class _Page4State extends State<Page4> {
                         itemBuilder: (context, index) {
                           return ListTile(
                             title: Text(
-                              filteredPlace[
-                                  index], // Use filteredPlace[index] instead of options[index]
+                              filteredPlace[index]
+                                  .district, // Use filteredPlace[index] instead of options[index]
                               style: TextStyle(
                                   color: Colors.black,
                                   fontWeight: FontWeight.w400,
@@ -138,11 +140,18 @@ class _Page4State extends State<Page4> {
                             ),
                             leading: Radio(
                               activeColor: Colors.black,
-                              value: filteredPlace[index],
+                              value: filteredPlace[index].district,
                               groupValue: currentOption,
                               onChanged: (value) {
                                 setState(() {
                                   currentOption = value.toString();
+                                  print(currentOption);
+                                  print('...............................');
+                                  print(options
+                                      .where((place) =>
+                                          place.district == currentOption)
+                                      .first
+                                      .block);
                                 });
                               },
                             ),
@@ -152,7 +161,10 @@ class _Page4State extends State<Page4> {
                     ),
                   ),
                 ),
-                MyButton(page: Page5()),
+                MyButton(
+                    page: Page5(
+                  medToRemove: 'testing',
+                )),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )
