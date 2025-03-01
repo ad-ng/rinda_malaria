@@ -1,13 +1,9 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
-import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_3.dart';
-import 'package:rinda_malaria/pages/page_5.dart';
 
 class Page2 extends StatefulWidget {
   Page2({
