@@ -8,20 +8,20 @@ import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_5.dart';
 
-class Page4 extends StatefulWidget {
+class Page6 extends StatefulWidget {
   final List<String> options_weigh;
   String currentOption_weigh;
-  Page4({
+  Page6({
     super.key,
     required this.options_weigh,
     required this.currentOption_weigh,
   });
 
   @override
-  State<Page4> createState() => _Page3State();
+  State<Page6> createState() => _Page3State();
 }
 
-class _Page3State extends State<Page4> {
+class _Page3State extends State<Page6> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;

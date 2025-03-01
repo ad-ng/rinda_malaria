@@ -6,7 +6,7 @@ import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
-import 'package:rinda_malaria/pages/page_4.dart';
+import 'package:rinda_malaria/pages/page_6.dart';
 
 class Page3 extends StatefulWidget {
   const Page3({super.key});
@@ -182,7 +182,7 @@ class _Page3State extends State<Page3> {
                       ),
                     ),
                     MyButton(
-                      page: Page4(
+                      page: Page6(
                           options_weigh: options_weigh(),
                           currentOption_weigh: options_weigh()[0]),
                     )
