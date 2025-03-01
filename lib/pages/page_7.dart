@@ -5,14 +5,14 @@ import 'package:provider/provider.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
 
-class Page5 extends StatefulWidget {
-  const Page5({super.key});
+class Page7 extends StatefulWidget {
+  const Page7({super.key});
 
   @override
-  State<Page5> createState() => _Page5State();
+  State<Page7> createState() => _Page7State();
 }
 
-class _Page5State extends State<Page5> {
+class _Page7State extends State<Page7> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
