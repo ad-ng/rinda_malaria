@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
-import 'package:rinda_malaria/pages/page_3.dart';
+import 'package:rinda_malaria/pages/page_5.dart';
 
 class Page2 extends StatefulWidget {
   Page2({
@@ -95,7 +95,7 @@ class _Page3State extends State<Page2> {
                     ),
                   ),
                 ),
-                MyButton(page: Page3()),
+                MyButton(page: Page5()),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )

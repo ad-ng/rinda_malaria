@@ -8,11 +8,11 @@ import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_6.dart';
 
-class Page3 extends StatefulWidget {
-  const Page3({super.key});
+class Page5 extends StatefulWidget {
+  const Page5({super.key});
 
   @override
-  State<Page3> createState() => _Page3State();
+  State<Page5> createState() => _Page5State();
 }
 
 List<String> options = [
@@ -21,7 +21,7 @@ List<String> options = [
   'Artesunate -Pyronaridine'
 ];
 
-class _Page3State extends State<Page3> {
+class _Page5State extends State<Page5> {
   String currentOption = options[0];
 
   options_weigh() {
