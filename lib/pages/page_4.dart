@@ -1,6 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:rinda_malaria/components/backButton.dart';
+import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mySearch.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/placeModel.dart';
@@ -123,10 +123,10 @@ class _Page4State extends State<Page4> {
             ),
             Column(
               children: [
-                BackButtonCustom(
-                  isLast: false,
-                ),
-                //Headers(),
+                // BackButtonCustom(
+                //   isLast: false,
+                // ),
+                Headers(),
                 Padding(
                   padding: const EdgeInsets.symmetric(),
                   child: Text(
