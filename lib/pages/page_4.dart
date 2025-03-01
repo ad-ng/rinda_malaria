@@ -57,6 +57,7 @@ class _Page4State extends State<Page4> {
   void initState() {
     super.initState();
     filteredPlace = options;
+
     textEditingController.addListener(() {
       filterLocations(textEditingController.text);
     });
@@ -75,14 +76,26 @@ class _Page4State extends State<Page4> {
     });
   }
 
-  String medToRemoveBlock = '';
+  String medToRemoveBlock = 'Block A';
   medToRemoveFunction() {
     if (medToRemoveBlock == 'Block A') {
-      return 'DihydroartemisininPiperaquine';
+      //return 'DihydroartemisininPiperaquine';
+      return [
+        'Artemether Lumefantrine',
+        'Artesunate -Pyronaridine',
+      ];
     } else if (medToRemoveBlock == 'Block B') {
-      return 'Artemether Lumefantrine';
+      // return 'Artemether Lumefantrine';
+      return [
+        'DihydroartemisininPiperaquine',
+        'Artesunate -Pyronaridine',
+      ];
     } else if (medToRemoveBlock == 'Block C') {
-      return 'Artesunate -Pyronaridine';
+      //return 'Artesunate -Pyronaridine';
+      return [
+        'Artemether Lumefantrine',
+        'DihydroartemisininPiperaquine',
+      ];
     }
   }
 
@@ -175,7 +188,7 @@ class _Page4State extends State<Page4> {
                 ),
                 MyButton(
                     page: Page5(
-                  medToRemove: medToRemoveFunction(),
+                  options: medToRemoveFunction(),
                 )),
                 SizedBox(
                   height: screenHeight * 0.08,

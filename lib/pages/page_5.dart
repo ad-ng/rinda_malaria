@@ -9,8 +9,8 @@ import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_6.dart';
 
 class Page5 extends StatefulWidget {
-  final String? medToRemove;
-  const Page5({super.key, this.medToRemove});
+  final List<String> options;
+  const Page5({super.key, required this.options});
 
   @override
   State<Page5> createState() => _Page5State();
@@ -72,16 +72,7 @@ class _Page5State extends State<Page5> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
-    if (widget.medToRemove != null) {
-      print('inhereted value ${widget.medToRemove}');
-      options.remove(widget.medToRemove);
-    } else {
-      options = [
-        'Artemether Lumefantrine',
-        'DihydroartemisininPiperaquine',
-        'Artesunate -Pyronaridine'
-      ];
-    }
+    options = widget.options;
     return Consumer<Igikorwa>(
       builder: (context, value, child) {
         value.umuti = currentOption;

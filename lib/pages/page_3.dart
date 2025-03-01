@@ -97,7 +97,15 @@ class _Page3State extends State<Page3> {
                   ),
                 ),
                 MyButton(
-                    page: (currentOption == 'New Case') ? Page5() : Page4()),
+                    page: (currentOption == 'New Case')
+                        ? Page5(
+                            options: [
+                              'Artemether Lumefantrine',
+                              'DihydroartemisininPiperaquine',
+                              'Artesunate -Pyronaridine'
+                            ],
+                          )
+                        : Page4()),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )
