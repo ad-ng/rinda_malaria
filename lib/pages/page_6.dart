@@ -11,7 +11,7 @@ import 'package:rinda_malaria/pages/page_7.dart';
 class Page6 extends StatefulWidget {
   final List<String> options_weigh;
   String currentOption_weigh;
-  Page6({
+   Page6({
     super.key,
     required this.options_weigh,
     required this.currentOption_weigh,

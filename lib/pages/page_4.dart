@@ -75,6 +75,17 @@ class _Page4State extends State<Page4> {
     });
   }
 
+  String medToRemoveBlock = '';
+  medToRemoveFunction() {
+    if (medToRemoveBlock == 'Block A') {
+      return 'DihydroartemisininPiperaquine';
+    } else if (medToRemoveBlock == 'Block B') {
+      return 'Artemether Lumefantrine';
+    } else if (medToRemoveBlock == 'Block C') {
+      return 'Artesunate -Pyronaridine';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
@@ -147,11 +158,12 @@ class _Page4State extends State<Page4> {
                                   currentOption = value.toString();
                                   print(currentOption);
                                   print('...............................');
-                                  print(options
+                                  medToRemoveBlock = options
                                       .where((place) =>
                                           place.district == currentOption)
                                       .first
-                                      .block);
+                                      .block;
+                                  print(medToRemoveBlock);
                                 });
                               },
                             ),
@@ -163,7 +175,7 @@ class _Page4State extends State<Page4> {
                 ),
                 MyButton(
                     page: Page5(
-                  medToRemove: 'testing',
+                  medToRemove: medToRemoveFunction(),
                 )),
                 SizedBox(
                   height: screenHeight * 0.08,

@@ -22,6 +22,16 @@ List<String> options = [
   'Artesunate -Pyronaridine'
 ];
 
+imgPath(umuti) {
+  if (umuti == 'Artemether Lumefantrine') {
+    return '././lib/images/Antimalarial-Artemether-Lumefantrine-20-120mg.jpg';
+  } else if (umuti == 'DihydroartemisininPiperaquine') {
+    return '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg';
+  } else {
+    return '././lib/images/artesunate-tablets-box.png';
+  }
+}
+
 class _Page5State extends State<Page5> {
   String currentOption = options[0];
 
@@ -64,6 +74,13 @@ class _Page5State extends State<Page5> {
     double screenHeight = MediaQuery.of(context).size.height;
     if (widget.medToRemove != null) {
       print('inhereted value ${widget.medToRemove}');
+      options.remove(widget.medToRemove);
+    } else {
+      options = [
+        'Artemether Lumefantrine',
+        'DihydroartemisininPiperaquine',
+        'Artesunate -Pyronaridine'
+      ];
     }
     return Consumer<Igikorwa>(
       builder: (context, value, child) {
@@ -94,94 +111,54 @@ class _Page5State extends State<Page5> {
                     ),
                     Headers(),
                     SizedBox(
-                      height: screenHeight * 0.05,
+                      height: screenHeight * 0.000,
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Hitamo umuti',
+                        'Ubwoko bwa Case',
                         style: TextStyle(
-                          fontSize: 30,
-                          fontWeight: FontWeight.w500,
                           color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30,
                         ),
                       ),
                     ),
                     SizedBox(
                       height: screenHeight * 0.01,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Card(
-                        color: Colors.white,
-                        child: Column(
-                          children: [
-                            ListTile(
-                              title: Text(
-                                'Artemether Lumefantrine',
-                                style: TextStyle(
-                                    fontWeight: FontWeight.w400,
-                                    color: Colors.black,
-                                    fontSize: 20),
-                              ),
-                              trailing: Image.asset(
-                                '././lib/images/Antimalarial-Artemether-Lumefantrine-20-120mg.jpg',
-                                height: screenHeight * 0.1,
-                              ),
-                              leading: Radio(
-                                activeColor: Colors.black,
-                                value: options[0],
-                                groupValue: currentOption,
-                                onChanged: (value) {
-                                  setState(() {
-                                    currentOption = value.toString();
-                                  });
-                                },
-                              ),
-                            ),
-                            ListTile(
-                              title: Text('Dihydroartemisinin - Piperaquine',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.black,
-                                      fontSize: 20)),
-                              trailing: Image.asset(
-                                '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg',
-                                height: screenHeight * 0.1,
-                              ),
-                              leading: Radio(
-                                activeColor: Colors.black,
-                                value: options[1],
-                                groupValue: currentOption,
-                                onChanged: (value) {
-                                  setState(() {
-                                    currentOption = value.toString();
-                                  });
-                                },
-                              ),
-                            ),
-                            ListTile(
-                              title: Text('Artesunate -Pyronaridine',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w400,
-                                      color: Colors.black,
-                                      fontSize: 20)),
-                              trailing: Image.asset(
-                                '././lib/images/artesunate-tablets-box.png',
-                                height: screenHeight * 0.1,
-                              ),
-                              leading: Radio(
-                                activeColor: Colors.black,
-                                value: options[2],
-                                groupValue: currentOption,
-                                onChanged: (valuen) {
-                                  setState(() {
-                                    currentOption = valuen.toString();
-                                  });
-                                },
-                              ),
-                            )
-                          ],
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10),
+                        child: Card(
+                          color: Colors.white,
+                          child: ListView.builder(
+                            itemCount: options.length,
+                            itemBuilder: (context, index) {
+                              return ListTile(
+                                  title: Text(
+                                    options[index],
+                                    style: TextStyle(
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w400,
+                                        fontSize: 20),
+                                  ),
+                                  leading: Radio(
+                                    activeColor: Colors.black,
+                                    value: options[index],
+                                    groupValue: currentOption,
+                                    onChanged: (value) {
+                                      setState(() {
+                                        currentOption = value.toString();
+                                      });
+                                    },
+                                  ),
+                                  trailing: Image.asset(
+                                    imgPath(options[index]),
+                                    height: screenHeight * 0.1,
+                                  ));
+                            },
+                          ),
                         ),
                       ),
                     ),
@@ -189,6 +166,9 @@ class _Page5State extends State<Page5> {
                       page: Page6(
                           options_weigh: options_weigh(),
                           currentOption_weigh: options_weigh()[0]),
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.08,
                     )
                   ],
                 ),
