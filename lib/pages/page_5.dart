@@ -6,6 +6,7 @@ import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
+import 'package:rinda_malaria/pages/page_6.dart';
 import 'package:rinda_malaria/pages/page_8.dart';
 
 class Page5 extends StatefulWidget {
@@ -154,9 +155,11 @@ class _Page5State extends State<Page5> {
                       ),
                     ),
                     MyButton(
-                      page: Page8(
-                          options_weigh: options_weigh(),
-                          currentOption_weigh: options_weigh()[0]),
+                      page: (currentOption == 'Artesunate -Pyronaridine')
+                          ? Page6()
+                          : Page8(
+                              options_weigh: options_weigh(),
+                              currentOption_weigh: options_weigh()[0]),
                     ),
                     SizedBox(
                       height: screenHeight * 0.08,
