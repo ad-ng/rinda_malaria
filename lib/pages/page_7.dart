@@ -4,25 +4,25 @@ import 'package:flutter/material.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
-import 'package:rinda_malaria/pages/page_7.dart';
+import 'package:rinda_malaria/pages/page_5.dart';
 import 'package:rinda_malaria/pages/page_8.dart';
 
-class Page6 extends StatefulWidget {
-  final List<String> options_weigh;
+class Page7 extends StatefulWidget {
   final List<String> imitiOptions;
-  const Page6({
+  final List<String> options_weigh;
+  const Page7({
     super.key,
-    required this.options_weigh,
     required this.imitiOptions,
+    required this.options_weigh,
   });
 
   @override
-  State<Page6> createState() => _Page6State();
+  State<Page7> createState() => _Page7State();
 }
 
 List<String> options = ['Yego', 'Oya'];
 
-class _Page6State extends State<Page6> {
+class _Page7State extends State<Page7> {
   String currentOption = options[0];
   @override
   Widget build(BuildContext context) {
@@ -58,7 +58,7 @@ class _Page6State extends State<Page6> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'N\'umugore Utwite ?',
+                    'Inda Irengeje Amezi 3 ?',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -105,14 +105,11 @@ class _Page6State extends State<Page6> {
                   height: screenHeight * 0.33,
                 ),
                 MyButton(
-                    page: (currentOption == 'Oya')
+                    page: (currentOption == 'Yego')
                         ? Page8(
                             options_weigh: widget.options_weigh,
                             currentOption_weigh: widget.options_weigh[0])
-                        : Page7(
-                            imitiOptions: widget.imitiOptions,
-                            options_weigh: widget.options_weigh,
-                          )),
+                        : Page5(options: widget.imitiOptions)),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )

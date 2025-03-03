@@ -108,7 +108,7 @@ class _Page5State extends State<Page5> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Ubwoko bwa Case',
+                        'Hitamo Umuti',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
@@ -156,7 +156,10 @@ class _Page5State extends State<Page5> {
                     ),
                     MyButton(
                       page: (currentOption == 'Artesunate -Pyronaridine')
-                          ? Page6()
+                          ? Page6(
+                              options_weigh: options_weigh(),
+                              imitiOptions: widget.options,
+                            )
                           : Page8(
                               options_weigh: options_weigh(),
                               currentOption_weigh: options_weigh()[0]),
