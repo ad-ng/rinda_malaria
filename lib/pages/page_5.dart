@@ -6,7 +6,7 @@ import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
-import 'package:rinda_malaria/pages/page_6.dart';
+import 'package:rinda_malaria/pages/page_8.dart';
 
 class Page5 extends StatefulWidget {
   final List<String> options;
@@ -154,7 +154,7 @@ class _Page5State extends State<Page5> {
                       ),
                     ),
                     MyButton(
-                      page: Page6(
+                      page: Page8(
                           options_weigh: options_weigh(),
                           currentOption_weigh: options_weigh()[0]),
                     ),
