@@ -58,7 +58,7 @@ class _Page6State extends State<Page6> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'N\'umugore Utwite ?',
+                    'Ni Umugore Utwite ?',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,

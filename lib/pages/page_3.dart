@@ -105,7 +105,7 @@ class _Page3State extends State<Page3> {
                             options: [
                               'AL',
                               'DHAP',
-                              'Artesunate -Pyronaridine'
+                              'ASPY'
                             ],
                           )
                         : Page4()),

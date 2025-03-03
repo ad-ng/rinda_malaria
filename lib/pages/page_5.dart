@@ -20,7 +20,7 @@ class Page5 extends StatefulWidget {
 List<String> options = [
   'AL',
   'DHAP',
-  'Artesunate -Pyronaridine'
+  'ASPY'
 ];
 
 imgPath(umuti) {
@@ -45,7 +45,7 @@ class _Page5State extends State<Page5> {
         'Ibiro 35 no kuzamura'
       ];
     }
-    if (currentOption == 'Artesunate -Pyronaridine') {
+    if (currentOption == 'ASPY') {
       return [
         'Ibiro 5- < 8',
         'Ibiro 8- < 15',
@@ -155,7 +155,7 @@ class _Page5State extends State<Page5> {
                       ),
                     ),
                     MyButton(
-                      page: (currentOption == 'Artesunate -Pyronaridine')
+                      page: (currentOption == 'ASPY')
                           ? Page6(
                               options_weigh: options_weigh(),
                               imitiOptions: widget.options,

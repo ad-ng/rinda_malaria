@@ -83,16 +83,16 @@ class _Page4State extends State<Page4> {
       //return 'DHAP';
       return [
         'AL',
-        'Artesunate -Pyronaridine',
+        'ASPY',
       ];
     } else if (medToRemoveBlock == 'Block B') {
       // return 'AL';
       return [
         'DHAP',
-        'Artesunate -Pyronaridine',
+        'ASPY',
       ];
     } else if (medToRemoveBlock == 'Block C') {
-      //return 'Artesunate -Pyronaridine';
+      //return 'ASPY';
       return [
         'AL',
         'DHAP',

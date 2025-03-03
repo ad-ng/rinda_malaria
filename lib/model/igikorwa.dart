@@ -21,7 +21,7 @@ class Igikorwa extends ChangeNotifier {
       } else if (ibiro == 'Ibiro 35 no kuzamura') {
         return '➤ 80mg/480mg';
       }
-    } else if (umuti == 'Artesunate -Pyronaridine') {
+    } else if (umuti == 'ASPY') {
       if (ibiro == 'Ibiro 5- < 8') {
         return '➤ 20mg/60mg';
       } else if (ibiro == 'Ibiro 8- < 15') {
@@ -91,7 +91,7 @@ class Igikorwa extends ChangeNotifier {
           'AL 6x1',
         ];
       }
-    } else if (umuti == 'Artesunate -Pyronaridine') {
+    } else if (umuti == 'ASPY') {
       if (ibiro == 'Ibiro 5- < 8') {
         return [
           '20mg/60mg/agasashi',
@@ -199,7 +199,7 @@ class Igikorwa extends ChangeNotifier {
           'Bafata ibinini 24 (Ibinini 4 buri amasaha 12; iminsi 3) 4 blister 6x1'
         ];
       }
-    } else if (umuti == 'Artesunate -Pyronaridine') {
+    } else if (umuti == 'ASPY') {
       if (ibiro == 'Ibiro 5- < 8') {
         return [
           'Udusashi 3 (Agashashe 1 kumunsi mu minsi 3)',
