@@ -31,7 +31,7 @@ class BackButtonCustom extends StatelessWidget {
                           style: TextStyle(fontSize: 20),
                         ),
                         content: Text(
-                          '1.Kunywera umuti imbere ya muganga \n2.Kurangiza umuti uko wawandikiwe \n3.Kudasaranganya umuti \n4.Gushakisha abandi barwayi bari mu muryango \n5.Kugaruka mu gihe ukomeje kubona ibimenyetso',
+                          '1.Kunywera umuti imbere ya muganga \n2.Kurangiza umuti uko wawandikiwe \n3.Kudasaranganya umuti \n4.Gushakisha abandi barwayi bari mu muryango \n5.Kugaruka kwa muganga mu gihe ugize ikindi kibazo',
                           style: TextStyle(fontSize: 16),
                         ),
                         actions: [
