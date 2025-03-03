@@ -11,7 +11,7 @@ class Igikorwa extends ChangeNotifier {
   });
 
   inganoYumuti() {
-    if (umuti == 'Artemether Lumefantrine') {
+    if (umuti == 'AL') {
       if (ibiro == 'Ibiro 5 - <15') {
         return '➤ 20mg/120mg';
       } else if (ibiro == 'Ibiro 15 - <25') {
@@ -67,7 +67,7 @@ class Igikorwa extends ChangeNotifier {
   }
 
   List<String> iremeRyumuti() {
-    if (umuti == 'Artemether Lumefantrine') {
+    if (umuti == 'AL') {
       if (ibiro == 'Ibiro 5 - <15') {
         return [
           'AL 6X1',
@@ -175,7 +175,7 @@ class Igikorwa extends ChangeNotifier {
   }
 
   List<String> ukoUmutiUtangwa() {
-    if (umuti == 'Artemether Lumefantrine') {
+    if (umuti == 'AL') {
       if (ibiro == 'Ibiro 5 - <15') {
         return [
           '6x1) bafata ibinini 6 (Ikinini 1 buri amasaha 12; iminsi 3)',

@@ -103,7 +103,7 @@ class _Page3State extends State<Page3> {
                     page: (currentOption == 'New Case')
                         ? Page5(
                             options: [
-                              'Artemether Lumefantrine',
+                              'AL',
                               'DihydroartemisininPiperaquine',
                               'Artesunate -Pyronaridine'
                             ],

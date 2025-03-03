@@ -18,13 +18,13 @@ class Page5 extends StatefulWidget {
 }
 
 List<String> options = [
-  'Artemether Lumefantrine',
+  'AL',
   'DihydroartemisininPiperaquine',
   'Artesunate -Pyronaridine'
 ];
 
 imgPath(umuti) {
-  if (umuti == 'Artemether Lumefantrine') {
+  if (umuti == 'AL') {
     return '././lib/images/Antimalarial-Artemether-Lumefantrine-20-120mg.jpg';
   } else if (umuti == 'DihydroartemisininPiperaquine') {
     return '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg';
@@ -37,7 +37,7 @@ class _Page5State extends State<Page5> {
   String currentOption = options[0];
 
   options_weigh() {
-    if (currentOption == 'Artemether Lumefantrine') {
+    if (currentOption == 'AL') {
       return [
         'Ibiro 5 - <15',
         'Ibiro 15 - <25',

@@ -82,11 +82,11 @@ class _Page4State extends State<Page4> {
     if (medToRemoveBlock == 'Block A') {
       //return 'DihydroartemisininPiperaquine';
       return [
-        'Artemether Lumefantrine',
+        'AL',
         'Artesunate -Pyronaridine',
       ];
     } else if (medToRemoveBlock == 'Block B') {
-      // return 'Artemether Lumefantrine';
+      // return 'AL';
       return [
         'DihydroartemisininPiperaquine',
         'Artesunate -Pyronaridine',
@@ -94,7 +94,7 @@ class _Page4State extends State<Page4> {
     } else if (medToRemoveBlock == 'Block C') {
       //return 'Artesunate -Pyronaridine';
       return [
-        'Artemether Lumefantrine',
+        'AL',
         'DihydroartemisininPiperaquine',
       ];
     }
