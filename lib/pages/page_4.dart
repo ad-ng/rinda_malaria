@@ -80,7 +80,7 @@ class _Page4State extends State<Page4> {
   String medToRemoveBlock = 'Block A';
   medToRemoveFunction() {
     if (medToRemoveBlock == 'Block A') {
-      //return 'DihydroartemisininPiperaquine';
+      //return 'DHAP';
       return [
         'AL',
         'Artesunate -Pyronaridine',
@@ -88,14 +88,14 @@ class _Page4State extends State<Page4> {
     } else if (medToRemoveBlock == 'Block B') {
       // return 'AL';
       return [
-        'DihydroartemisininPiperaquine',
+        'DHAP',
         'Artesunate -Pyronaridine',
       ];
     } else if (medToRemoveBlock == 'Block C') {
       //return 'Artesunate -Pyronaridine';
       return [
         'AL',
-        'DihydroartemisininPiperaquine',
+        'DHAP',
       ];
     }
   }

@@ -19,14 +19,14 @@ class Page5 extends StatefulWidget {
 
 List<String> options = [
   'AL',
-  'DihydroartemisininPiperaquine',
+  'DHAP',
   'Artesunate -Pyronaridine'
 ];
 
 imgPath(umuti) {
   if (umuti == 'AL') {
     return '././lib/images/Antimalarial-Artemether-Lumefantrine-20-120mg.jpg';
-  } else if (umuti == 'DihydroartemisininPiperaquine') {
+  } else if (umuti == 'DHAP') {
     return '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg';
   } else {
     return '././lib/images/artesunate-tablets-box.png';
@@ -56,7 +56,7 @@ class _Page5State extends State<Page5> {
         'Ibiro 65 kuzamura'
       ];
     }
-    if (currentOption == 'DihydroartemisininPiperaquine') {
+    if (currentOption == 'DHAP') {
       return [
         'Ibiro 5 - < 8',
         'Ibiro 8- <11',

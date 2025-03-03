@@ -104,7 +104,7 @@ class _Page3State extends State<Page3> {
                         ? Page5(
                             options: [
                               'AL',
-                              'DihydroartemisininPiperaquine',
+                              'DHAP',
                               'Artesunate -Pyronaridine'
                             ],
                           )
