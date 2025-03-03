@@ -139,9 +139,6 @@ class _Page4State extends State<Page4> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: screenHeight * 0.01,
-                ),
                 Mysearch(textEditingController: textEditingController),
                 SizedBox(
                   height: 5,
@@ -192,7 +189,7 @@ class _Page4State extends State<Page4> {
                   options: medToRemoveFunction(),
                 )),
                 SizedBox(
-                  height: screenHeight * 0.04,
+                  height: screenHeight * 0.035,
                 )
               ],
             ),

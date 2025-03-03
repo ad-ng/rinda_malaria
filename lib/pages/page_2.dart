@@ -96,7 +96,7 @@ class _Page3State extends State<Page2> {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * 0.26,
+                  height: screenHeight * 0.18,
                 ),
                 MyButton(page: Page3()),
                 SizedBox(

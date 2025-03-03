@@ -102,7 +102,7 @@ class _Page7State extends State<Page7> {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * 0.33,
+                  height: screenHeight * 0.2,
                 ),
                 MyButton(
                     page: (currentOption == 'Yego')

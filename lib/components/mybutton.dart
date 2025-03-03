@@ -42,7 +42,7 @@ class MyButton extends StatelessWidget {
         margin: EdgeInsets.only(
             left: screenWidth * 0.05,
             right: screenWidth * 0.05,
-            top: screenHeight * 0.05),
+            top: screenHeight * 0.02),
         width: screenWidth,
         height: screenHeight * 0.07,
         decoration: BoxDecoration(

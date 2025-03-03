@@ -93,6 +93,9 @@ class _Page1State extends State<Page1> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 30,
+              ),
               MyButton(
                 currentOption: currentOption,
                 page: Page2(),
