@@ -1,5 +1,6 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
+import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mySearch.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
@@ -123,9 +124,9 @@ class _Page4State extends State<Page4> {
             ),
             Column(
               children: [
-                // BackButtonCustom(
-                //   isLast: false,
-                // ),
+                BackButtonCustom(
+                  isLast: false,
+                ),
                 Headers(),
                 Padding(
                   padding: const EdgeInsets.symmetric(),
@@ -143,7 +144,7 @@ class _Page4State extends State<Page4> {
                 ),
                 Mysearch(textEditingController: textEditingController),
                 SizedBox(
-                  height: 15,
+                  height: 5,
                 ),
                 Expanded(
                   child: Padding(
@@ -191,7 +192,7 @@ class _Page4State extends State<Page4> {
                   options: medToRemoveFunction(),
                 )),
                 SizedBox(
-                  height: screenHeight * 0.08,
+                  height: screenHeight * 0.04,
                 )
               ],
             ),
