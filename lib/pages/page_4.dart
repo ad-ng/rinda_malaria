@@ -8,7 +8,7 @@ import 'package:rinda_malaria/model/placeModel.dart';
 import 'package:rinda_malaria/pages/page_5.dart';
 
 class Page4 extends StatefulWidget {
-  Page4({
+  const Page4({
     super.key,
   });
 
@@ -49,7 +49,7 @@ List<Placemodel> options = [
   Placemodel(district: 'Rwamagana', block: 'Block A')
 ];
 List<Placemodel> filteredPlace = [];
-TextEditingController textEditingController = new TextEditingController();
+TextEditingController textEditingController = TextEditingController();
 
 class _Page4State extends State<Page4> {
   String currentOption = options[0].district;

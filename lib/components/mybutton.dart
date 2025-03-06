@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class MyButton extends StatelessWidget {
   final Widget page;
   final currentOption;
-  MyButton({super.key, required this.page, this.currentOption});
+  const MyButton({super.key, required this.page, this.currentOption});
 
   @override
   Widget build(BuildContext context) {

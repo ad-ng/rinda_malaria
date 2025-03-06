@@ -6,7 +6,7 @@ import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/pages/page_3.dart';
 
 class Page2 extends StatefulWidget {
-  Page2({
+  const Page2({
     super.key,
   });
 
