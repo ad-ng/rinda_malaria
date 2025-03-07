@@ -17,11 +17,7 @@ class Page5 extends StatefulWidget {
   State<Page5> createState() => _Page5State();
 }
 
-List<String> options = [
-  'AL',
-  'DHAP',
-  'ASPY'
-];
+List<String> options = ['AL', 'DHAP', 'ASPY'];
 
 imgPath(umuti) {
   if (umuti == 'AL') {
@@ -35,40 +31,6 @@ imgPath(umuti) {
 
 class _Page5State extends State<Page5> {
   String currentOption = options[0];
-
-  options_weigh() {
-    if (currentOption == 'AL') {
-      return [
-        'Ibiro 5 - <15',
-        'Ibiro 15 - <25',
-        'Ibiro 25 - <35',
-        'Ibiro 35 no kuzamura'
-      ];
-    }
-    if (currentOption == 'ASPY') {
-      return [
-        'Ibiro 5- < 8',
-        'Ibiro 8- < 15',
-        'Ibiro 15- <20',
-        'Ibiro 20- <24',
-        'Ibiro 24- <45',
-        'Ibiro 45 <65',
-        'Ibiro 65 kuzamura'
-      ];
-    }
-    if (currentOption == 'DHAP') {
-      return [
-        'Ibiro 5 - < 8',
-        'Ibiro 8- <11',
-        'Ibiro 11- <17',
-        'Ibiro 17 - <25',
-        'Ibiro 25 - <36',
-        'Ibiro 36 - <60',
-        'Ibiro 60 - <80',
-        'Ibiro 80 Kuzamura'
-      ];
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -157,12 +119,11 @@ class _Page5State extends State<Page5> {
                     MyButton(
                       page: (currentOption == 'ASPY')
                           ? Page6(
-                              options_weigh: options_weigh(),
-                              imitiOptions: widget.options,
+                              umuti: currentOption,
                             )
                           : Page8(
-                              options_weigh: options_weigh(),
-                              currentOption_weigh: options_weigh()[0]),
+                              umuti: currentOption,
+                            ),
                     ),
                     SizedBox(
                       height: screenHeight * 0.08,

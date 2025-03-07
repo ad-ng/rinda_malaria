@@ -8,13 +8,8 @@ import 'package:rinda_malaria/pages/page_5.dart';
 import 'package:rinda_malaria/pages/page_8.dart';
 
 class Page7 extends StatefulWidget {
-  final List<String> imitiOptions;
-  final List<String> options_weigh;
-  const Page7({
-    super.key,
-    required this.imitiOptions,
-    required this.options_weigh,
-  });
+  final String umuti;
+  const Page7({super.key, required this.umuti});
 
   @override
   State<Page7> createState() => _Page7State();
@@ -107,9 +102,9 @@ class _Page7State extends State<Page7> {
                 MyButton(
                     page: (currentOption == 'Yego')
                         ? Page8(
-                            options_weigh: widget.options_weigh,
-                            currentOption_weigh: widget.options_weigh[0])
-                        : Page5(options: widget.imitiOptions)),
+                            umuti: widget.umuti,
+                          )
+                        : Page5(options: ['AL', 'DHAP', 'ASPY'])),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )

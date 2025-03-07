@@ -4,6 +4,7 @@ import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/pages/page_3.dart';
+import 'package:rinda_malaria/pages/page_8.dart';
 
 class Page2 extends StatefulWidget {
   const Page2({
@@ -14,13 +15,26 @@ class Page2 extends StatefulWidget {
   State<Page2> createState() => _Page3State();
 }
 
-List<String> options = ['Simple Malaria', 'Simple Malaria + MDS', 'Severe'];
+List<String> options = [
+  'Simple Malaria',
+  'Simple Malaria + MDS',
+  'Severe Malaria'
+];
 
 class _Page3State extends State<Page2> {
   String currentOption = options[0];
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+    selectPage() {
+      if (currentOption == 'Simple Malaria + MDS') {
+        return Page8(umuti: 'simple+mds');
+      } else if (currentOption == 'Severe Malaria') {
+        return Page8(umuti: 'severe');
+      }
+      return Page3();
+    }
+
     return Scaffold(
       body: SafeArea(
         child: Stack(
@@ -98,7 +112,7 @@ class _Page3State extends State<Page2> {
                 SizedBox(
                   height: screenHeight * 0.18,
                 ),
-                MyButton(page: Page3()),
+                MyButton(page: selectPage()),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )

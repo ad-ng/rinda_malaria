@@ -9,13 +9,8 @@ import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_9.dart';
 
 class Page8 extends StatefulWidget {
-  final List<String> options_weigh;
-  String currentOption_weigh;
-  Page8({
-    super.key,
-    required this.options_weigh,
-    required this.currentOption_weigh,
-  });
+  String umuti;
+  Page8({super.key, required this.umuti});
 
   @override
   State<Page8> createState() => _Page8State();
@@ -25,7 +20,9 @@ class _Page8State extends State<Page8> {
   @override
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
+
     selectTable(String umuti) {
+      print(widget.umuti);
       if (umuti == 'AL') {
         return SizedBox(
           width: 500,
@@ -340,56 +337,554 @@ class _Page8State extends State<Page8> {
         );
       } else if (umuti == 'ASPY') {
         return SizedBox(
-          width: MediaQuery.of(context).size.width,
-          child: Table(
-            border: TableBorder.all(),
-            children: [
-              TableRow(
-                children: [
-                  Text('Formulations Available'),
-                  Text('Body Weight (kg)'),
-                  Text('Dosage'),
-                  Text('Prescription'),
-                ],
-              ),
-              TableRow(
-                children: [
-                  Text('Oral Suspension of Granules'),
-                  Container(
-                    child: Table(
-                      border: TableBorder.all(),
+          width: 580,
+          child: Card(
+            child: Table(
+              columnWidths: {
+                0: FractionColumnWidth(0.22),
+                1: FractionColumnWidth(0.20),
+                2: FractionColumnWidth(0.22),
+                3: FractionColumnWidth(0.36)
+              },
+              border: TableBorder.all(),
+              children: [
+                TableRow(
+                  children: [
+                    Text(
+                      'Formulations Available',
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      'Body Weight (kg)',
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      'Dosage',
+                      textAlign: TextAlign.center,
+                    ),
+                    Text(
+                      'Prescription',
+                      textAlign: TextAlign.center,
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(3),
+                      child: Text(
+                        'Oral Suspension of Granules',
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                    Container(
+                      child: Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '≥ 5 to <8',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '8 to <15',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '15 to <20',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '20 mg + 60 mg',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '40 mg + 120 mg',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '60 mg + 180 mg',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '1 Sachet per Day for 3 Days',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '2 Sachets per Day for 3 Days',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Padding(
+                                padding: const EdgeInsets.all(3),
+                                child: Text(
+                                  '3 Sachets per Day for 3 Days',
+                                  textAlign: TextAlign.center,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+                TableRow(
+                  children: [
+                    Text(
+                      'Tablets',
+                      textAlign: TextAlign.center,
+                    ),
+                    Container(
+                      child: Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(
+                            children: [
+                              Text(
+                                '20 to <24\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '24 to <45\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '45 to <65\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '≥65\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(
+                            children: [
+                              Text(
+                                '60 mg + 180 mg\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '120 mg + 360 mg\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '180 mg + 540 mg\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '240 mg + 720 mg\n',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    Container(
+                      child: Table(
+                        border: TableBorder.all(),
+                        children: [
+                          TableRow(
+                            children: [
+                              Text(
+                                '1 Tablet per Day for 3 Days \n(1 Blister of 3 Tablets)',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '2 Tablets per Day for 3 Days \n(2 Blisters of 3 Tablets)',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '3 Tablets per Day for 3 Days \n(3 Blisters of 3 Tablets)',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          ),
+                          TableRow(
+                            children: [
+                              Text(
+                                '4 Tablets per Day for 3 Days \n(4 Blisters of 3 Tablets)',
+                                textAlign: TextAlign.center,
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
+          ),
+        );
+      } else if (umuti == 'DHAP') {
+      } else if (umuti == 'simple+mds') {
+      } else if (umuti == 'severe') {
+        return SizedBox(
+          width: 580,
+          child: Card(
+            child: Column(
+              children: [
+                Table(
+                  columnWidths: {
+                    0: FractionColumnWidth(0.16),
+                    1: FractionColumnWidth(0.2),
+                    2: FractionColumnWidth(0.64),
+                  },
+                  border: TableBorder.all(),
+                  children: [
+                    TableRow(
                       children: [
-                        TableRow(
-                          children: [
-                            Text('≥ 5 to <8'),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(3),
+                          child: Text(
+                            'Body Weight in KG',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                        TableRow(
-                          children: [
-                            Text('data'),
-                          ],
+                        Padding(
+                          padding: const EdgeInsets.all(3),
+                          child: Text(
+                            'Artesunate Inj',
+                            textAlign: TextAlign.center,
+                          ),
                         ),
-                        TableRow(
-                          children: [
-                            Text('data'),
-                          ],
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(6),
+                                    child: Text(
+                                      'Artesunate Dose',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Container(
+                                    child: Table(
+                                      border: TableBorder.all(),
+                                      children: [
+                                        TableRow(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(7),
+                                              child: Text(
+                                                'Time : HO',
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(7.0),
+                                              child: Text(
+                                                'Time : H12',
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(7.0),
+                                              child: Text(
+                                                'Time : H24',
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
-                  ),
-                  Text('data'),
-                  Text('data'),
-                ],
-              ),
-              TableRow(
-                children: [
-                  Text('Tablets'),
-                  Text('data'),
-                  Text('data'),
-                  Text('data'),
-                ],
-              )
-            ],
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            '< 20 Kg',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            'Artesunate Inj',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '3.0 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '3.0 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '3.0 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            '> 20 Kg',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            'Artesunate Inj',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '2.4 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '2.4 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '2.4 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Table(
+                  border: TableBorder.all(),
+                  columnWidths: {
+                    0: FractionColumnWidth(0.16),
+                    1: FractionColumnWidth(0.84),
+                  },
+                  children: [
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Note:',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'Hospital:',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                          ' After 24h, evaluate and switch to the appropriate ACT \nif improvement. If not continue with Artesunate every 24h \n(Maximum 7 days) until the patient can take Oral \nMedication.'),
+                                    ],
+                                  ),
+                                )
+                              ]),
+                              TableRow(children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Row(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'HC:',
+                                        style: TextStyle(
+                                            fontWeight: FontWeight.bold),
+                                      ),
+                                      Text(
+                                          ' Provide the pre-transfer Treatment and refer to the nearest \nHospital with examined slide'),
+                                    ],
+                                  ),
+                                )
+                              ])
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
           ),
         );
       }
@@ -397,7 +892,6 @@ class _Page8State extends State<Page8> {
 
     return Consumer<Igikorwa>(
       builder: (context, value, child) {
-        value.ibiro = widget.currentOption_weigh;
         return Scaffold(
           body: SafeArea(
             child: Stack(
@@ -429,7 +923,7 @@ class _Page8State extends State<Page8> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Emeza ibiro',
+                        'Uko Umuti Utangwa',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
@@ -445,7 +939,7 @@ class _Page8State extends State<Page8> {
                         scrollDirection: Axis.horizontal,
                         children: [
                           SizedBox(
-                            child: selectTable('ASPY'),
+                            child: selectTable(widget.umuti),
                           ),
                         ],
                       ),
