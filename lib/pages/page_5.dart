@@ -22,11 +22,11 @@ List<String> options = ['AL', 'DHAP', 'ASPY'];
 
 imgPath(umuti) {
   if (umuti == 'AL') {
-    return '././lib/images/Antimalarial-Artemether-Lumefantrine-20-120mg.jpg';
+    return '././lib/images/AL.jpeg';
   } else if (umuti == 'DHAP') {
-    return '././lib/images/dihydroartemisinin-piperaquine-tablets.jpg';
+    return '././lib/images/DHAP.jpeg';
   } else {
-    return '././lib/images/artesunate-tablets-box.png';
+    return '././lib/images/ASPY.jpeg';
   }
 }
 
@@ -122,9 +122,33 @@ class _Page5State extends State<Page5> {
                                       });
                                     },
                                   ),
-                                  trailing: Image.asset(
-                                    imgPath(options[index]),
-                                    height: screenHeight * 0.1,
+                                  trailing: GestureDetector(
+                                    onTap: () {
+                                      showAdaptiveDialog(
+                                        context: context,
+                                        builder: (context) {
+                                          return AlertDialog.adaptive(
+                                            title: Text(
+                                                'Umuti: ${options[index]}'),
+                                            content: SizedBox(
+                                                height: 300,
+                                                child: Image.asset(
+                                                    imgPath(options[index]))),
+                                            actions: [
+                                              TextButton(
+                                                onPressed: () =>
+                                                    Navigator.pop(context),
+                                                child: Text('Funga'),
+                                              )
+                                            ],
+                                          );
+                                        },
+                                      );
+                                    },
+                                    child: Image.asset(
+                                      imgPath(options[index]),
+                                      height: screenHeight * 0.1,
+                                    ),
                                   ));
                             },
                           ),
