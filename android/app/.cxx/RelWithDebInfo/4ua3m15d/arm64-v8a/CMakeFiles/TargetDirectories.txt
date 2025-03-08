@@ -1,0 +1,2 @@
+/Users/ngogaadolphe/Desktop/rinda_malaria/android/app/.cxx/RelWithDebInfo/4ua3m15d/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/ngogaadolphe/Desktop/rinda_malaria/android/app/.cxx/RelWithDebInfo/4ua3m15d/arm64-v8a/CMakeFiles/rebuild_cache.dir

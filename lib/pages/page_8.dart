@@ -1,15 +1,11 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
-import 'package:rinda_malaria/components/mybutton.dart';
-import 'package:rinda_malaria/model/igikorwa.dart';
-import 'package:rinda_malaria/pages/page_9.dart';
 
 class Page8 extends StatefulWidget {
-  String umuti;
+  final String umuti;
   Page8({super.key, required this.umuti});
 
   @override
@@ -630,6 +626,245 @@ class _Page8State extends State<Page8> {
         );
       } else if (umuti == 'DHAP') {
       } else if (umuti == 'simple+mds') {
+        return SizedBox(
+          width: 580,
+          child: Card(
+            child: Column(
+              children: [
+                Table(
+                  columnWidths: {
+                    0: FractionColumnWidth(0.16),
+                    1: FractionColumnWidth(0.2),
+                    2: FractionColumnWidth(0.64),
+                  },
+                  border: TableBorder.all(),
+                  children: [
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(3),
+                          child: Text(
+                            'Body Weight in KG',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(3),
+                          child: Text(
+                            'Artesunate Inj',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(6),
+                                    child: Text(
+                                      'Artesunate Dose',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  )
+                                ],
+                              ),
+                              TableRow(
+                                children: [
+                                  Container(
+                                    child: Table(
+                                      border: TableBorder.all(),
+                                      children: [
+                                        TableRow(
+                                          children: [
+                                            Padding(
+                                              padding: const EdgeInsets.all(7),
+                                              child: Text(
+                                                'Time : HO',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(7.0),
+                                              child: Text(
+                                                'Time : H12',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            ),
+                                            Padding(
+                                              padding:
+                                                  const EdgeInsets.all(7.0),
+                                              child: Text(
+                                                'Time : H24',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
+                                                textAlign: TextAlign.center,
+                                              ),
+                                            )
+                                          ],
+                                        )
+                                      ],
+                                    ),
+                                  )
+                                ],
+                              )
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            '< 20 Kg',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            'Artesunate Inj',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '3.0 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '3.0 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '3.0 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            '> 20 Kg',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.all(4.0),
+                          child: Text(
+                            'Artesunate Inj',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(
+                                children: [
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '2.4 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '2.4 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                  Padding(
+                                    padding: const EdgeInsets.all(4.0),
+                                    child: Text(
+                                      '2.4 mg per Kg',
+                                      textAlign: TextAlign.center,
+                                    ),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+                Table(
+                  border: TableBorder.all(),
+                  columnWidths: {
+                    0: FractionColumnWidth(0.16),
+                    1: FractionColumnWidth(0.84),
+                  },
+                  children: [
+                    TableRow(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Text(
+                            'Note:',
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                        Container(
+                          child: Table(
+                            border: TableBorder.all(),
+                            children: [
+                              TableRow(children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(6.0),
+                                  child: Text(
+                                    'After 24h, evaluate and switch to the appropriate ACT if improvement. If not continue with Artesunate every 24h (Maximum 7 days) until the patient can take Oral Medication.',
+                                    style:
+                                        TextStyle(fontWeight: FontWeight.bold),
+                                  ),
+                                )
+                              ]),
+                            ],
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+        );
       } else if (umuti == 'severe') {
         return SizedBox(
           width: 580,
@@ -688,6 +923,9 @@ class _Page8State extends State<Page8> {
                                               child: Text(
                                                 'Time : HO',
                                                 textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                               ),
                                             ),
                                             Padding(
@@ -695,6 +933,9 @@ class _Page8State extends State<Page8> {
                                                   const EdgeInsets.all(7.0),
                                               child: Text(
                                                 'Time : H12',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                                 textAlign: TextAlign.center,
                                               ),
                                             ),
@@ -703,6 +944,9 @@ class _Page8State extends State<Page8> {
                                                   const EdgeInsets.all(7.0),
                                               child: Text(
                                                 'Time : H24',
+                                                style: TextStyle(
+                                                    fontWeight:
+                                                        FontWeight.bold),
                                                 textAlign: TextAlign.center,
                                               ),
                                             )
@@ -890,80 +1134,66 @@ class _Page8State extends State<Page8> {
       }
     }
 
-    return Consumer<Igikorwa>(
-      builder: (context, value, child) {
-        return Scaffold(
-          body: SafeArea(
-            child: Stack(
+    return Scaffold(
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Image.asset(
+              '././lib/images/transmission.jpg',
+              fit: BoxFit.cover,
+              height: screenHeight,
+            ),
+            BackdropFilter(
+              filter: ImageFilter.blur(
+                sigmaX: 3,
+                sigmaY: 2,
+              ),
+              child: Container(
+                color: Colors.black.withOpacity(
+                    0), // Optional: overlay to make it darker or transparent
+              ),
+            ),
+            Column(
               children: [
-                Image.asset(
-                  '././lib/images/transmission.jpg',
-                  fit: BoxFit.cover,
-                  height: screenHeight,
+                BackButtonCustom(
+                  isLast: true,
                 ),
-                BackdropFilter(
-                  filter: ImageFilter.blur(
-                    sigmaX: 3,
-                    sigmaY: 2,
+                Headers(),
+                SizedBox(
+                  height: screenHeight * 0.000,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    'Uko Umuti Utangwa',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontWeight: FontWeight.w500,
+                      fontSize: 30,
+                    ),
                   ),
-                  child: Container(
-                    color: Colors.black.withOpacity(
-                        0), // Optional: overlay to make it darker or transparent
+                ),
+                SizedBox(
+                  height: screenHeight * 0.01,
+                ),
+                Expanded(
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: [
+                      SizedBox(
+                        child: selectTable(widget.umuti),
+                      ),
+                    ],
                   ),
                 ),
-                Column(
-                  children: [
-                    BackButtonCustom(
-                      isLast: false,
-                    ),
-                    Headers(),
-                    SizedBox(
-                      height: screenHeight * 0.000,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Uko Umuti Utangwa',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 30,
-                        ),
-                      ),
-                    ),
-                    SizedBox(
-                      height: screenHeight * 0.01,
-                    ),
-                    Expanded(
-                      child: ListView(
-                        scrollDirection: Axis.horizontal,
-                        children: [
-                          SizedBox(
-                            child: selectTable(widget.umuti),
-                          ),
-                        ],
-                      ),
-                    ),
-                    MyButton(page: Page9()),
-                    SizedBox(
-                      height: screenHeight * 0.08,
-                    )
-                  ],
-                ),
+                SizedBox(
+                  height: screenHeight * 0.2,
+                )
               ],
             ),
-          ),
-        );
-      },
+          ],
+        ),
+      ),
     );
   }
-
-  TableRow buildRow(List<String> cells) => TableRow(
-        children: cells.map((cell) {
-          return Padding(
-            padding: const EdgeInsets.all(12),
-            child: Center(child: Text(cell)),
-          );
-        }).toList(),
-      );
 }
