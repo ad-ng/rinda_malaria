@@ -38,25 +38,25 @@ class Igikorwa extends ChangeNotifier {
         return '➤ 240mg/720mg';
       }
     } else if (umuti == 'DHAP') {
-      if (ibiro == 'Ibiro 5 - < 8') {
+      if (ibiro == 'Ibiro 5 -< 8') {
         return '➤ 20mg/160mg';
       }
-      if (ibiro == 'Ibiro 8- <11') {
+      if (ibiro == 'Ibiro 8 -< 11') {
         return '➤ 30mg/240mg';
       }
-      if (ibiro == 'Ibiro 11- <17') {
+      if (ibiro == 'Ibiro 11 -< 17') {
         return '➤ 40mg/320mg';
       }
-      if (ibiro == 'Ibiro 17 - <25') {
+      if (ibiro == 'Ibiro 17 -< 25') {
         return '➤ 60mg/480mg';
       }
-      if (ibiro == 'Ibiro 25 - <36') {
+      if (ibiro == 'Ibiro 25 -< 36') {
         return '➤ 80mg/640mg';
       }
-      if (ibiro == 'Ibiro 36 - <60') {
+      if (ibiro == 'Ibiro 36 -< 60') {
         return '➤ 120/960 mg';
       }
-      if (ibiro == 'Ibiro 60 - <80') {
+      if (ibiro == 'Ibiro 60 -< 80') {
         return '➤ 160/1280 mg';
       }
       if (ibiro == 'Ibiro 80 Kuzamura') {

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
+import 'package:rinda_malaria/pages/page_10.dart';
 
 class Page9 extends StatefulWidget {
   const Page9({super.key});
@@ -104,9 +105,12 @@ class _Page9State extends State<Page9> {
                 SizedBox(
                   height: screenHeight * 0.01,
                 ),
-                MyButton(page: Page9()),
+                MyButton(
+                    page: Page10(
+                  ibiro: currentOption,
+                )),
                 SizedBox(
-                  height: screenHeight * 0.06,
+                  height: screenHeight * 0.04,
                 )
               ],
             ),
