@@ -8,6 +8,7 @@ import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_6.dart';
 import 'package:rinda_malaria/pages/page_8.dart';
+import 'package:rinda_malaria/pages/page_9.dart';
 
 class Page5 extends StatefulWidget {
   final List<String> options;
@@ -36,6 +37,20 @@ class _Page5State extends State<Page5> {
   Widget build(BuildContext context) {
     double screenHeight = MediaQuery.of(context).size.height;
     options = widget.options;
+
+    selectPage() {
+      if (currentOption == 'ASPY') {
+        return Page6(
+          umuti: currentOption,
+        );
+      } else if (currentOption == 'AL') {
+        return Page8(
+          umuti: currentOption,
+        );
+      }
+      return Page9();
+    }
+
     return Consumer<Igikorwa>(
       builder: (context, value, child) {
         value.umuti = currentOption;
@@ -117,13 +132,7 @@ class _Page5State extends State<Page5> {
                       ),
                     ),
                     MyButton(
-                      page: (currentOption == 'ASPY')
-                          ? Page6(
-                              umuti: currentOption,
-                            )
-                          : Page8(
-                              umuti: currentOption,
-                            ),
+                      page: selectPage(),
                     ),
                     SizedBox(
                       height: screenHeight * 0.08,
