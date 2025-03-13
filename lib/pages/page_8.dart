@@ -1153,41 +1153,54 @@ class _Page8State extends State<Page8> {
                     0), // Optional: overlay to make it darker or transparent
               ),
             ),
-            Column(
+            Stack(
               children: [
-                BackButtonCustom(
-                  isLast: true,
-                ),
-                Headers(),
-                SizedBox(
-                  height: screenHeight * 0.000,
+                Column(
+                  children: [
+                    BackButtonCustom(
+                      isLast: true,
+                    ),
+                    Headers(),
+                    SizedBox(
+                      height: screenHeight * 0.000,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(
+                        'Medical Prescription',
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontWeight: FontWeight.w500,
+                          fontSize: 30,
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.01,
+                    ),
+                    Expanded(
+                      child: ListView(
+                        scrollDirection: Axis.horizontal,
+                        children: [
+                          SizedBox(
+                            child: selectTable(widget.umuti),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(
+                      height: screenHeight * 0.2,
+                    )
+                  ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'Medical Prescription',
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w500,
-                      fontSize: 30,
-                    ),
+                  padding: const EdgeInsets.only(left: 210),
+                  child: Image.asset(
+                    '././lib/images/Animation - 1740305084861.gif',
+                    fit: BoxFit.cover,
+                    height: 70,
+                    color: Colors.red[400],
                   ),
-                ),
-                SizedBox(
-                  height: screenHeight * 0.01,
-                ),
-                Expanded(
-                  child: ListView(
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      SizedBox(
-                        child: selectTable(widget.umuti),
-                      ),
-                    ],
-                  ),
-                ),
-                SizedBox(
-                  height: screenHeight * 0.2,
                 )
               ],
             ),

@@ -70,7 +70,7 @@ class BackButtonCustom extends StatelessWidget {
                       color: Colors.black,
                     ),
                     Text(
-                      'Final Message',
+                      'Message',
                       style: TextStyle(color: Colors.black, fontSize: 20),
                     )
                   ],

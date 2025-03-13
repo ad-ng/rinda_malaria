@@ -165,85 +165,101 @@ class _Page10State extends State<Page10> {
                 color: Colors.black.withOpacity(0),
               ),
             ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
+            Stack(
               children: [
-                BackButtonCustom(
-                  isLast: true,
-                ),
-                Headers(),
-                SizedBox(
-                  height: screenHeight * 0.000,
-                ),
-                Center(
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Text(
-                      'Medical Prescription',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontWeight: FontWeight.w500,
-                        fontSize: 30,
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    BackButtonCustom(
+                      isLast: true,
+                    ),
+                    Headers(),
+                    SizedBox(
+                      height: screenHeight * 0.000,
+                    ),
+                    Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          'Medical Prescription',
+                          style: TextStyle(
+                            color: Colors.black,
+                            fontWeight: FontWeight.w500,
+                            fontSize: 30,
+                          ),
+                        ),
                       ),
                     ),
-                  ),
-                ),
-                Card(
-                  margin: EdgeInsets.only(left: 10),
-                  child: Padding(
-                    padding: const EdgeInsets.all(12),
-                    child: Text(
-                      'Ingano Yumuti afata kumunsi: \n ${inganoYumuti()}',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ),
-                ),
-                Expanded(
-                  child: ListView.builder(
-                    itemCount: iremeRyumuti()!.length,
-                    itemBuilder: (BuildContext context, int index) {
-                      return Card(
-                        margin: EdgeInsets.only(left: 12, right: 12, top: 10),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Padding(
-                              padding: const EdgeInsets.only(left: 12, top: 12),
-                              child: Text(
-                                'Ireme ry\'umuti (Ubwoko bw\' umuti):',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 12),
-                              child: Text(
-                                iremeRyumuti()![index],
-                                style: TextStyle(
-                                    color: Colors.green, fontSize: 20),
-                              ),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.only(left: 12, top: 12),
-                              child: Text(
-                                'Uko umurwayi afata umuti:',
-                                style: TextStyle(fontSize: 20),
-                              ),
-                            ),
-                            Padding(
-                              padding:
-                                  const EdgeInsets.only(left: 12, bottom: 12),
-                              child: Text(
-                                ukoUmutiUtangwa()![index],
-                                style: TextStyle(
-                                    color: Colors.green, fontSize: 20),
-                              ),
-                            )
-                          ],
+                    Card(
+                      margin: EdgeInsets.only(left: 10),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12),
+                        child: Text(
+                          'Ingano Yumuti afata kumunsi: \n ${inganoYumuti()}',
+                          style: TextStyle(fontSize: 20),
                         ),
-                      );
-                    },
-                  ),
+                      ),
+                    ),
+                    Expanded(
+                      child: ListView.builder(
+                        itemCount: iremeRyumuti()!.length,
+                        itemBuilder: (BuildContext context, int index) {
+                          return Card(
+                            margin:
+                                EdgeInsets.only(left: 12, right: 12, top: 10),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 12, top: 12),
+                                  child: Text(
+                                    'Ireme ry\'umuti (Ubwoko bw\' umuti):',
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(left: 12),
+                                  child: Text(
+                                    iremeRyumuti()![index],
+                                    style: TextStyle(
+                                        color: Colors.green, fontSize: 20),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.only(left: 12, top: 12),
+                                  child: Text(
+                                    'Uko umurwayi afata umuti:',
+                                    style: TextStyle(fontSize: 20),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 12, bottom: 12),
+                                  child: Text(
+                                    ukoUmutiUtangwa()![index],
+                                    style: TextStyle(
+                                        color: Colors.green, fontSize: 20),
+                                  ),
+                                )
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+                    ),
+                  ],
                 ),
+                Padding(
+                  padding: const EdgeInsets.only(left: 210),
+                  child: Image.asset(
+                    '././lib/images/Animation - 1740305084861.gif',
+                    fit: BoxFit.cover,
+                    height: 70,
+                    color: Colors.red[400],
+                  ),
+                )
               ],
             ),
           ],
