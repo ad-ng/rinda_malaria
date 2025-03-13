@@ -52,7 +52,7 @@ class _Page3State extends State<Page3> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Ubwoko bwa Case',
+                    'Case Definition',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
