@@ -15,7 +15,7 @@ class Page7 extends StatefulWidget {
   State<Page7> createState() => _Page7State();
 }
 
-List<String> options = ['Yego', 'Oya'];
+List<String> options = ['Yes', 'No'];
 
 class _Page7State extends State<Page7> {
   String currentOption = options[0];
@@ -53,7 +53,7 @@ class _Page7State extends State<Page7> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Inda Irengeje Amezi 3 ?',
+                    'Is Pregnancy Beyond 3 Months?',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -100,11 +100,14 @@ class _Page7State extends State<Page7> {
                   height: screenHeight * 0.2,
                 ),
                 MyButton(
-                    page: (currentOption == 'Yego')
-                        ? Page8(
-                            umuti: widget.umuti,
-                          )
-                        : Page5(options: ['AL', 'DHAP', 'ASPY'])),
+                  page: (currentOption == 'Yes')
+                      ? Page8(
+                          umuti: widget.umuti,
+                        )
+                      : Page5(
+                          options: ['AL', 'DHAP'],
+                        ),
+                ),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )

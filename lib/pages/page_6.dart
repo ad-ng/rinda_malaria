@@ -15,7 +15,7 @@ class Page6 extends StatefulWidget {
   State<Page6> createState() => _Page6State();
 }
 
-List<String> options = ['Yego', 'Oya'];
+List<String> options = ['Yes', 'No'];
 
 class _Page6State extends State<Page6> {
   String currentOption = options[0];
@@ -53,7 +53,7 @@ class _Page6State extends State<Page6> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Ni Umugore Utwite ?',
+                    'Is A Pregnant Woman ?',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -100,7 +100,7 @@ class _Page6State extends State<Page6> {
                   height: screenHeight * 0.2,
                 ),
                 MyButton(
-                    page: (currentOption == 'Oya')
+                    page: (currentOption == 'No')
                         ? Page8(
                             umuti: widget.umuti,
                           )
