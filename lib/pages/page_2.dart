@@ -66,7 +66,7 @@ class _Page3State extends State<Page2> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Ubwoko bwa Maraliya',
+                    'Form of Malaria',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
