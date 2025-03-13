@@ -252,7 +252,7 @@ class _Page10State extends State<Page10> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(left: 210),
+                  padding: const EdgeInsets.only(left: 180),
                   child: Image.asset(
                     '././lib/images/Animation - 1740305084861.gif',
                     fit: BoxFit.cover,
