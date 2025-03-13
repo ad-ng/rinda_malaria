@@ -85,7 +85,7 @@ class _Page5State extends State<Page5> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Choose Remedy',
+                        'Choose Medicine',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
@@ -105,6 +105,11 @@ class _Page5State extends State<Page5> {
                             itemCount: options.length,
                             itemBuilder: (context, index) {
                               return ListTile(
+                                contentPadding: EdgeInsets.only(
+                                  left: 10,
+                                  right: 20,
+                                  top: 20,
+                                ),
                                 title: Text(
                                   options[index],
                                   style: TextStyle(
@@ -128,8 +133,8 @@ class _Page5State extends State<Page5> {
                                       context: context,
                                       builder: (context) {
                                         return AlertDialog.adaptive(
-                                          title:
-                                              Text('Remedy: ${options[index]}'),
+                                          title: Text(
+                                              'Medicine: ${options[index]}'),
                                           content: SizedBox(
                                               height: 300,
                                               child: Image.asset(
