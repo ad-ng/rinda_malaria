@@ -12,7 +12,7 @@ class Page1 extends StatefulWidget {
   State<Page1> createState() => _Page1State();
 }
 
-List<String> options = ['Afite Malariya', 'Nta Malariya Afite'];
+List<String> options = ['Confirmed Malaria', 'No Malaria'];
 
 class _Page1State extends State<Page1> {
   String currentOption = options[0];
@@ -55,7 +55,7 @@ class _Page1State extends State<Page1> {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       textAlign: TextAlign.center,
-                      'IFASHAMIVURIRE KU NDWARA YA MALARIYA',
+                      'Malaria Drug Prescription Guide',
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 30,

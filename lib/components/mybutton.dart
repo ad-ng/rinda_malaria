@@ -10,11 +10,11 @@ class MyButton extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     nextPageFunction() {
-      if (currentOption == 'Nta Malariya Afite') {
+      if (currentOption == 'No Malaria') {
         return ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-              'NTA MALARIYA UFITE!',
+              'No Malaria Found !',
               style: TextStyle(
                 color: Colors.amber,
                 fontSize: 30,
@@ -51,7 +51,7 @@ class MyButton extends StatelessWidget {
         ),
         child: Center(
           child: Text(
-            'Emeza',
+            'Confirm',
             style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.w500,
