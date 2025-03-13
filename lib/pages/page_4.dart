@@ -118,8 +118,7 @@ class _Page4State extends State<Page4> {
                 sigmaY: 2,
               ),
               child: Container(
-                color: Colors.black.withOpacity(
-                    0), // Optional: overlay to make it darker or transparent
+                color: Colors.black.withOpacity(0),
               ),
             ),
             Column(

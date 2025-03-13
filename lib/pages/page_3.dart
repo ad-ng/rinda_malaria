@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:rinda_malaria/components/backButton.dart';
 import 'package:rinda_malaria/components/headers.dart';
 import 'package:rinda_malaria/components/mybutton.dart';
+import 'package:rinda_malaria/pages/page_4.dart';
 import 'package:rinda_malaria/pages/page_5.dart';
 
 class Page3 extends StatefulWidget {
@@ -99,9 +100,12 @@ class _Page3State extends State<Page3> {
                   height: screenHeight * 0.2,
                 ),
                 MyButton(
-                    page: Page5(
-                  options: ['AL', 'DHAP', 'ASPY'],
-                )),
+                  page: (currentOption == 'Suspected Treatment Failure')
+                      ? Page4()
+                      : Page5(
+                          options: ['AL', 'DHAP', 'ASPY'],
+                        ),
+                ),
                 SizedBox(
                   height: screenHeight * 0.08,
                 )
