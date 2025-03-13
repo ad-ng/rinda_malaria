@@ -85,7 +85,7 @@ class _Page5State extends State<Page5> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Hitamo Umuti',
+                        'Choose Remedy',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
@@ -129,7 +129,7 @@ class _Page5State extends State<Page5> {
                                         builder: (context) {
                                           return AlertDialog.adaptive(
                                             title: Text(
-                                                'Umuti: ${options[index]}'),
+                                                'Remedy: ${options[index]}'),
                                             content: SizedBox(
                                                 height: 300,
                                                 child: Image.asset(
@@ -138,7 +138,11 @@ class _Page5State extends State<Page5> {
                                               TextButton(
                                                 onPressed: () =>
                                                     Navigator.pop(context),
-                                                child: Text('Funga'),
+                                                child: Text(
+                                                  'Close',
+                                                  style: TextStyle(
+                                                      color: Colors.red[400]),
+                                                ),
                                               )
                                             ],
                                           );
