@@ -105,55 +105,56 @@ class _Page5State extends State<Page5> {
                             itemCount: options.length,
                             itemBuilder: (context, index) {
                               return ListTile(
-                                  title: Text(
-                                    options[index],
-                                    style: TextStyle(
-                                        color: Colors.black,
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 20),
+                                title: Text(
+                                  options[index],
+                                  style: TextStyle(
+                                      color: Colors.black,
+                                      fontWeight: FontWeight.w400,
+                                      fontSize: 20),
+                                ),
+                                leading: Radio(
+                                  activeColor: Colors.black,
+                                  value: options[index],
+                                  groupValue: currentOption,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      currentOption = value.toString();
+                                    });
+                                  },
+                                ),
+                                trailing: GestureDetector(
+                                  onTap: () {
+                                    showAdaptiveDialog(
+                                      context: context,
+                                      builder: (context) {
+                                        return AlertDialog.adaptive(
+                                          title:
+                                              Text('Remedy: ${options[index]}'),
+                                          content: SizedBox(
+                                              height: 300,
+                                              child: Image.asset(
+                                                  imgPath(options[index]))),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () =>
+                                                  Navigator.pop(context),
+                                              child: Text(
+                                                'Close',
+                                                style: TextStyle(
+                                                    color: Colors.red[400]),
+                                              ),
+                                            )
+                                          ],
+                                        );
+                                      },
+                                    );
+                                  },
+                                  child: Image.asset(
+                                    imgPath(options[index]),
+                                    height: screenHeight * 0.1,
                                   ),
-                                  leading: Radio(
-                                    activeColor: Colors.black,
-                                    value: options[index],
-                                    groupValue: currentOption,
-                                    onChanged: (value) {
-                                      setState(() {
-                                        currentOption = value.toString();
-                                      });
-                                    },
-                                  ),
-                                  trailing: GestureDetector(
-                                    onTap: () {
-                                      showAdaptiveDialog(
-                                        context: context,
-                                        builder: (context) {
-                                          return AlertDialog.adaptive(
-                                            title: Text(
-                                                'Remedy: ${options[index]}'),
-                                            content: SizedBox(
-                                                height: 300,
-                                                child: Image.asset(
-                                                    imgPath(options[index]))),
-                                            actions: [
-                                              TextButton(
-                                                onPressed: () =>
-                                                    Navigator.pop(context),
-                                                child: Text(
-                                                  'Close',
-                                                  style: TextStyle(
-                                                      color: Colors.red[400]),
-                                                ),
-                                              )
-                                            ],
-                                          );
-                                        },
-                                      );
-                                    },
-                                    child: Image.asset(
-                                      imgPath(options[index]),
-                                      height: screenHeight * 0.1,
-                                    ),
-                                  ));
+                                ),
+                              );
                             },
                           ),
                         ),
