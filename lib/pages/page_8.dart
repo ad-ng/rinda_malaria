@@ -1165,7 +1165,7 @@ class _Page8State extends State<Page8> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Uko Umuti Utangwa',
+                    'Medical Prescription',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
