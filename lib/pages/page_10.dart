@@ -16,77 +16,77 @@ class _Page10State extends State<Page10> {
   @override
   Widget build(BuildContext context) {
     inganoYumuti() {
-      if (widget.ibiro == 'Ibiro 5 -< 8') {
+      if (widget.ibiro == 'KG 5 -< 8') {
         return '➤ 20mg/160mg';
       }
-      if (widget.ibiro == 'Ibiro 8 -< 11') {
+      if (widget.ibiro == 'KG 8 -< 11') {
         return '➤ 30mg/240mg';
       }
-      if (widget.ibiro == 'Ibiro 11 -< 17') {
+      if (widget.ibiro == 'KG 11 -< 17') {
         return '➤ 40mg/320mg';
       }
-      if (widget.ibiro == 'Ibiro 17 -< 25') {
+      if (widget.ibiro == 'KG 17 -< 25') {
         return '➤ 60mg/480mg';
       }
-      if (widget.ibiro == 'Ibiro 25 -< 36') {
+      if (widget.ibiro == 'KG 25 -< 36') {
         return '➤ 80mg/640mg';
       }
-      if (widget.ibiro == 'Ibiro 36 -< 60') {
+      if (widget.ibiro == 'KG 36 -< 60') {
         return '➤ 120/960 mg';
       }
-      if (widget.ibiro == 'Ibiro 60 -< 80') {
+      if (widget.ibiro == 'KG 60 -< 80') {
         return '➤ 160/1280 mg';
       }
-      if (widget.ibiro == 'Ibiro 80 Kuzamura') {
+      if (widget.ibiro == 'KG 80 And Above') {
         return '➤ 200/1600 mg';
       }
     }
 
     iremeRyumuti() {
-      if (widget.ibiro == 'Ibiro 5 -< 8') {
+      if (widget.ibiro == 'KG 5 -< 8') {
         return [
           '20mg/160mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 8 -< 11') {
+      if (widget.ibiro == 'KG 8 -< 11') {
         return [
           '30mg/240mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 11 -< 17') {
+      if (widget.ibiro == 'KG 11 -< 17') {
         return [
           '40mg/320mg',
           '20mg/160mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 17 -< 25') {
+      if (widget.ibiro == 'KG 17 -< 25') {
         return [
           '30mg/240mg',
           '20mg/160mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 25 -< 36') {
+      if (widget.ibiro == 'KG 25 -< 36') {
         return [
           '80mg/640mg',
           '40mg/320mg',
           '20mg/160mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 36 -< 60') {
+      if (widget.ibiro == 'KG 36 -< 60') {
         return [
           '40mg/320mg',
           '20mg/160mg',
           '30mg/240mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 60 -< 80') {
+      if (widget.ibiro == 'KG 60 -< 80') {
         return [
           '80mg/640mg',
           '40mg/320mg',
           '20mg/160mg',
         ];
       }
-      if (widget.ibiro == 'Ibiro 80 Kuzamura') {
+      if (widget.ibiro == 'KG 80 And Above') {
         return [
           '40mg/320mg',
           '20mg/160mg',
@@ -95,50 +95,50 @@ class _Page10State extends State<Page10> {
     }
 
     ukoUmutiUtangwa() {
-      if (widget.ibiro == 'Ibiro 5 -< 8') {
+      if (widget.ibiro == 'KG 5 -< 8') {
         return [
           '3 (Ikinini 1 ku munsi mu minsi 3)',
         ];
       }
-      if (widget.ibiro == 'Ibiro 8 -< 11') {
+      if (widget.ibiro == 'KG 8 -< 11') {
         return [
           '3 (Ikinini 1 ku munsi mu minsi 3)',
         ];
       }
-      if (widget.ibiro == 'Ibiro 11 -< 17') {
+      if (widget.ibiro == 'KG 11 -< 17') {
         return [
           '3 (Ibinini 1 ku munsi mu minsi 3)',
           '6 (Ibinini 2 ku munsi mu minsi 3)'
         ];
       }
-      if (widget.ibiro == 'Ibiro 17 -< 25') {
+      if (widget.ibiro == 'KG 17 -< 25') {
         return [
           '6 (Ibinini 2 ku munsi mu minsi 3)',
           '9 (Ibinini 3 ku munsi mu minsi 3)'
         ];
       }
-      if (widget.ibiro == 'Ibiro 25 -< 36') {
+      if (widget.ibiro == 'KG 25 -< 36') {
         return [
           '3 (Ikinini 1 ku munsi mu minsi 3)',
           '6 (Ibinini 2 ku munsi mu minsi 3',
           '12 (ibinini 4 ku munsi mu minsi 3)'
         ];
       }
-      if (widget.ibiro == 'Ibiro 36 -< 60') {
+      if (widget.ibiro == 'KG 36 -< 60') {
         return [
           '9 (Ibinini 3 ku munsi mu minsi 3)',
           '18 (ibinini 6 ku munsi mu minsi 3)',
           '12 (Ibinini 4 ku munsi mu minsi 3)'
         ];
       }
-      if (widget.ibiro == 'Ibiro 60 -< 80') {
+      if (widget.ibiro == 'KG 60 -< 80') {
         return [
           '6 (ibinini 2 ku munsi mu minsi 3)',
           '12 (Ibinini 4 ku munsi mu minsi 3)',
           '24 (ibinini 8 ku munsi mu minsi 3)'
         ];
       }
-      if (widget.ibiro == 'Ibiro 80 Kuzamura') {
+      if (widget.ibiro == 'KG 80 And Above') {
         return [
           '➤ 15 (Ibinini 5 ku munsi mu minsi 3)',
           '➤ 30 (ibinini 10 ku munsi mu minsi 3)'
@@ -179,7 +179,7 @@ class _Page10State extends State<Page10> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
-                      'Uko Umuti Utangwa',
+                      'Medical Prescription',
                       style: TextStyle(
                         color: Colors.black,
                         fontWeight: FontWeight.w500,

@@ -14,14 +14,14 @@ class Page9 extends StatefulWidget {
 }
 
 List<String> options = [
-  'Ibiro 5 -< 8',
-  'Ibiro 8 -< 11',
-  'Ibiro 11 -< 17',
-  'Ibiro 17 -< 25',
-  'Ibiro 25 -< 36',
-  'Ibiro 36 -< 60',
-  'Ibiro 60 -< 80',
-  'Ibiro 80 Kuzamura',
+  'KG 5 -< 8',
+  'KG 8 -< 11',
+  'KG 11 -< 17',
+  'KG 17 -< 25',
+  'KG 25 -< 36',
+  'KG 36 -< 60',
+  'KG 60 -< 80',
+  'KG 80 And Above',
 ];
 
 class _Page9State extends State<Page9> {
@@ -59,7 +59,7 @@ class _Page9State extends State<Page9> {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    'Hitamo Ibiro',
+                    'Select Body Weight Range',
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
