@@ -1167,7 +1167,7 @@ class _Page8State extends State<Page8> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Text(
-                        'Medical Prescription',
+                        'Medical Prescription ${widget.umuti}',
                         style: TextStyle(
                           color: Colors.black,
                           fontWeight: FontWeight.w500,
