@@ -346,30 +346,49 @@ class _Page8State extends State<Page8> {
               children: [
                 TableRow(
                   children: [
-                    Text(
-                      'Formulations Available',
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        'Formulations Available',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    Text(
-                      'Body Weight (kg)',
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.all(4.0),
+                      child: Text(
+                        'Body Weight (kg)',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    Text(
-                      'Dosage',
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        'Dosage',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
-                    Text(
-                      'Prescription',
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.all(10),
+                      child: Text(
+                        'Prescription',
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                   ],
                 ),
                 TableRow(
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(3),
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 5,
+                        horizontal: 3,
+                      ),
                       child: Text(
-                        'Oral Suspension of Granules',
+                        'Oral Suspension of Granules ASPY',
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -497,9 +516,15 @@ class _Page8State extends State<Page8> {
                 ),
                 TableRow(
                   children: [
-                    Text(
-                      'Tablets',
-                      textAlign: TextAlign.center,
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        vertical: 50,
+                        horizontal: 20,
+                      ),
+                      child: Text(
+                        'Tablets ASPY',
+                        textAlign: TextAlign.center,
+                      ),
                     ),
                     Container(
                       child: Table(
@@ -2062,8 +2087,8 @@ class _Page8State extends State<Page8> {
                     )
                   ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 180),
+                Align(
+                  alignment: Alignment.topCenter,
                   child: Image.asset(
                     '././lib/images/Animation - 1740305084861.gif',
                     fit: BoxFit.cover,

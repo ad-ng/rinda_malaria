@@ -8,7 +8,6 @@ import 'package:rinda_malaria/components/mybutton.dart';
 import 'package:rinda_malaria/model/igikorwa.dart';
 import 'package:rinda_malaria/pages/page_6.dart';
 import 'package:rinda_malaria/pages/page_8.dart';
-import 'package:rinda_malaria/pages/page_9.dart';
 
 class Page5 extends StatefulWidget {
   final List<String> options;
