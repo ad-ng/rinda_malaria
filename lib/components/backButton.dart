@@ -27,11 +27,11 @@ class BackButtonCustom extends StatelessWidget {
                     builder: (context) {
                       return AlertDialog(
                         title: Text(
-                          'IBIGOMBA KWITABWAHO: ',
+                          'THINGS TO BE CONSIDERED: ',
                           style: TextStyle(fontSize: 20),
                         ),
                         content: Text(
-                          '1.Kunywera umuti imbere ya muganga \n2.Kurangiza umuti uko wawandikiwe \n3.Kudasaranganya umuti \n4.Gushakisha abandi barwayi bari mu muryango \n5.Kugaruka kwa muganga mu gihe ugize ikindi kibazo',
+                          '1. Take the first dose in from the Clinician \n2. Educate the patient to take the full medication (dose) \n3. Do not share medication with family members  \n4. Check if no other family members have signs/symptoms \n5. Explain the possible drug side effect   \n6. Ask the patient to come back if any problem',
                           style: TextStyle(fontSize: 16),
                         ),
                         actions: [
@@ -40,7 +40,7 @@ class BackButtonCustom extends StatelessWidget {
                               Navigator.of(context).pop();
                             },
                             child: Text(
-                              'FUNGA',
+                              'Close',
                               style: TextStyle(color: Colors.redAccent[100]),
                             ),
                           ),
@@ -54,7 +54,7 @@ class BackButtonCustom extends StatelessWidget {
                                 );
                               },
                               child: Text(
-                                'AHABANZA',
+                                'Home',
                                 style: TextStyle(color: Colors.redAccent[100]),
                               ))
                         ],
