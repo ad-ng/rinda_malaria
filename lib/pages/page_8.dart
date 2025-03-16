@@ -2058,19 +2058,16 @@ class _Page8State extends State<Page8> {
                     SizedBox(
                       height: screenHeight * 0.000,
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        'Medical Prescription ${widget.umuti}',
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 30,
-                        ),
+                    Text(
+                      'Medical Prescription ${widget.umuti}',
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontWeight: FontWeight.w500,
+                        fontSize: 25,
                       ),
                     ),
                     SizedBox(
-                      height: screenHeight * 0.01,
+                      height: screenHeight * 0.005,
                     ),
                     Expanded(
                       child: ListView(
@@ -2082,9 +2079,6 @@ class _Page8State extends State<Page8> {
                         ],
                       ),
                     ),
-                    SizedBox(
-                      height: screenHeight * 0.1,
-                    )
                   ],
                 ),
                 Align(
