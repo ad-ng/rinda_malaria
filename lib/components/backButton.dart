@@ -31,7 +31,7 @@ class BackButtonCustom extends StatelessWidget {
                           style: TextStyle(fontSize: 20),
                         ),
                         content: Text(
-                          '1. Take the first dose in from the Clinician \n2. Educate the patient to take the full medication (dose) \n3. Do not share medication with family members  \n4. Check if no other family members have signs/symptoms \n5. Explain the possible drug side effect   \n6. Ask the patient to come back if any problem',
+                          '1. Take the first dose in front of the Clinician \n2. Educate the patient to take the full medication (dose) \n3. Do not share medication with family members  \n4. Check if no other family members have signs/symptoms \n5. Explain the possible drug side effect   \n6. Ask the patient to come back if any problem',
                           style: TextStyle(fontSize: 16),
                         ),
                         actions: [
