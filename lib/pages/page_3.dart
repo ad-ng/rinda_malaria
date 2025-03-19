@@ -90,6 +90,44 @@ class _Page3State extends State<Page3> {
                                 });
                               },
                             ),
+                            trailing: (options[index] ==
+                                    'Suspected Treatment Failure')
+                                ? IconButton(
+                                    onPressed: () {
+                                      showAdaptiveDialog(
+                                        context: context,
+                                        builder: (context) =>
+                                            AlertDialog.adaptive(
+                                          title: Text(
+                                            'Treatment Failure Definition',
+                                            style: TextStyle(fontSize: 20),
+                                          ),
+                                          content: Text(
+                                              textAlign: TextAlign.start,
+                                              style: TextStyle(fontSize: 18),
+                                              '1. Absence of Therapeutic Response (TR) after 3 days of treatment with ACTs, within 28 days \n2. Persistence of Symptoms or \n3. Clinical Deterioration \n4. Confirmed by Microscopy+ (Parasitemia)'),
+                                          actions: [
+                                            TextButton(
+                                              onPressed: () =>
+                                                  Navigator.pop(context),
+                                              child: Text(
+                                                'close',
+                                                style: TextStyle(
+                                                  color: Colors.red,
+                                                ),
+                                              ),
+                                            )
+                                          ],
+                                        ),
+                                      );
+                                    },
+                                    icon: Icon(
+                                      Icons.info,
+                                      color: Colors.blue,
+                                      size: 40,
+                                    ),
+                                  )
+                                : SizedBox.shrink(),
                           );
                         },
                       ),
