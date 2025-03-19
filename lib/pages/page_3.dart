@@ -98,6 +98,7 @@ class _Page3State extends State<Page3> {
                                         context: context,
                                         builder: (context) =>
                                             AlertDialog.adaptive(
+                                          backgroundColor: Colors.white,
                                           title: Text(
                                             'Treatment Failure Definition',
                                             style: TextStyle(fontSize: 20),
